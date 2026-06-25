@@ -153,11 +153,128 @@ nav .container{
    CARA KERJA
 ========================= */
 
+.cara-container{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cara-title{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.nomor{
+    font-size: 36px;
+    color: #22C55E;
+    font-weight: bold;
+    text-align: left;
+}
+
+.cara-card{
+    width: 220px;
+    background: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
 /* Nanti isi di sini */
 
 /* =========================
    JENIS SAMPAH
 ========================= */
+
+/* SECTION */
+#jenis-sampah{
+    padding: 80px 8%;
+    background-color: #f5f9f5;
+}
+
+.jenis-sampah-title{
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.jenis-sampah-title h2{
+    font-size: 40px;
+}
+
+/* CONTAINER CARD */
+.jenis-sampah-container{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: nowrap;
+    align-items: stretch;
+}
+
+/* CARD UTAMA */
+.jenis-sampah-card{
+    width: 280px;
+    background: white;
+    border-radius: 25px;
+    padding: 25px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* ICON/GAMBAR UTAMA */
+.jenis-sampah-card img{
+    width: 90px;
+    margin-bottom: 15px;
+}
+
+.jenis-sampah-card h3{
+    color: #1c5e20;
+    margin-bottom: 10px;
+}
+
+.jenis-sampah-card p{
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* CONTOH SAMPAH */
+.contoh-container{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.contoh-card{
+    width: 80px;
+    background: #f7f7f7;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.contoh-card img{
+    width: 45px;
+    margin-bottom: 8px;
+}
+
+.contoh-card p{
+    font-size: 12px;
+    margin: 0;
+}
+
+.btn-lihat{
+    background: #2e7d32;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.contoh-container{
+    display: none;
+}
 
 /* Nanti isi di sini */
 
