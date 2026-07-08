@@ -180,6 +180,13 @@ nav .container{
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     text-align: center;
 }
+
+.cara-card img{
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 10px;
+}
 /* Nanti isi di sini */
 
 /* =========================
@@ -262,7 +269,17 @@ nav .container{
     margin: 0;
 }
 
-.btn-lihat{
+.btn-contoh{
+    background: #2e7d32;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.btn-kembali{
     background: #2e7d32;
     color: white;
     border: none;
@@ -277,6 +294,261 @@ nav .container{
 }
 
 /* Nanti isi di sini */
+
+/* ==========================
+        EDUKASI
+========================== */
+
+#edukasi{
+    padding:80px 0;
+    background:#f8faf8;
+}
+
+.edukasi-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+.edukasi-header h2{
+    font-size:32px;
+    color:#1b5e20;
+}
+
+.lihat-semua{
+    text-decoration:none;
+    color:#2e7d32;
+    font-weight:600;
+    transition:.3s;
+}
+
+.lihat-semua:hover{
+    color:#1b5e20;
+}
+
+.edukasi-container{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.edukasi-card{
+    display:flex;
+    align-items:center;
+    background:#fff;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.edukasi-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 12px 30px rgba(0,0,0,.12);
+}
+
+.edukasi-card img{
+    width:220px;
+    height:150px;
+    object-fit:cover;
+}
+
+.edukasi-text{
+    padding:20px;
+    flex:1;
+}
+
+.edukasi-text h3{
+    color:#1b5e20;
+    margin-bottom:10px;
+}
+
+.edukasi-text p{
+    color:#555;
+    line-height:1.6;
+    margin-bottom:15px;
+}
+
+.edukasi-text a{
+    text-decoration:none;
+    color:#2e7d32;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.edukasi-text a:hover{
+    color:#1b5e20;
+}
+
+.btn-edukasi{
+    margin-top:35px;
+    text-align:center;
+}
+
+.btn-lihat-semua{
+    display:inline-block;
+    background:#2e7d32;
+    color:#fff;
+    padding:12px 28px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn-lihat-semua:hover{
+    background:#1b5e20;
+}
+
+/*==========================
+          REWARD
+==========================*/
+#reward{
+    padding:80px 0;
+    background:#F5F8F5;
+}
+
+.reward-title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.reward-title h2{
+    font-size:36px;
+    color:#2E7D32;
+    margin-bottom:15px;
+}
+
+.reward-title p{
+    color:#666;
+}
+
+.reward-container{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.reward-card{
+    width:260px;
+    background:white;
+    border-radius:18px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.reward-card:hover{
+    transform:translateY(-8px);
+}
+
+.reward-card img{
+    width:100px;
+    height:100px;
+    object-fit:contain;
+    margin-bottom:20px;
+}
+
+.reward-card h3{
+    color:#2E7D32;
+    margin-bottom:15px;
+}
+
+.reward-card span{
+    display:inline-block;
+    background:#43A047;
+    color:white;
+    padding:8px 18px;
+    border-radius:30px;
+}
+
+.reward-button{
+    text-align:center;
+    margin-top:45px;
+}
+
+.btn-reward{
+    display:inline-block;
+    background:#2E7D32;
+    color:white;
+    text-decoration:none;
+    padding:12px 30px;
+    border-radius:10px;
+    transition:.3s;
+}
+
+.btn-reward:hover{
+    background:#1B5E20;
+}
+
+/*==========================
+          LOKASI
+==========================*/
+#lokasi{
+    padding:80px 0;
+    background:#F5F8F5;
+}
+
+.lokasi-title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.lokasi-title h2{
+    color:#2E7D32;
+    font-size:36px;
+    margin-bottom:15px;
+}
+
+.lokasi-title p{
+    color:#666;
+}
+
+.lokasi-preview{
+    display:flex;
+    align-items:center;
+    gap:40px;
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.lokasi-preview img{
+    width:45%;
+    border-radius:15px;
+}
+
+.lokasi-text{
+    width:55%;
+}
+
+.lokasi-text h3{
+    color:#2E7D32;
+    margin-bottom:15px;
+}
+
+.lokasi-text p{
+    color:#555;
+    line-height:1.7;
+    margin-bottom:25px;
+}
+
+.btn-lokasi{
+    display:inline-block;
+    background:#2E7D32;
+    color:white;
+    text-decoration:none;
+    padding:12px 28px;
+    border-radius:10px;
+}
+
+.btn-lokasi:hover{
+    background:#1B5E20;
+}
 
 /* =========================
    FOOTER
