@@ -1,167 +1,312 @@
-/* =========================================
-   HALAMAN CONTOH JENIS SAMPAH
-========================================= */
+/* =====================================================
+   TUKAR SAMPAH JAVASCRIPT
+===================================================== */
+
+
+/* =====================================================
+   CONTOH JENIS SAMPAH
+===================================================== */
 
 const judul = document.getElementById("judul");
 const penjelasan = document.getElementById("penjelasan");
 const card = document.getElementById("contoh-card");
 
-const parameter = new URLSearchParams(window.location.search);
-const jenis = parameter.get("jenis");
-
 if (judul && penjelasan && card) {
 
-    if (jenis == "organik") {
+    const parameter = new URLSearchParams(window.location.search);
+    const jenis = parameter.get("jenis");
 
-        judul.innerHTML = "Sampah Organik";
+    const dataSampah = {
 
-        penjelasan.innerHTML =
-            "Sampah organik berasal dari makhluk hidup dan mudah terurai.";
+        organik: {
+            judul: "Sampah Organik",
+            deskripsi: "Sampah organik berasal dari makhluk hidup dan mudah terurai.",
+            contoh: [
+                ["img/sisa-makanan.png", "Sisa Makanan"],
+                ["img/daun-kering.png", "Daun Kering"],
+                ["img/kulit-buah.png", "Kulit Buah"]
+            ]
+        },
 
-        card.innerHTML = `
-            <div class="card">
-                <img src="img/sisa-makanan.png" alt="">
-                <h3>Sisa Makanan</h3>
-            </div>
+        anorganik: {
+            judul: "Sampah Anorganik",
+            deskripsi: "Sampah yang sulit terurai namun masih dapat didaur ulang.",
+            contoh: [
+                ["img/botol-plastik.png", "Botol Plastik"],
+                ["img/kaleng.png", "Kaleng"],
+                ["img/kertas.png", "Kertas"]
+            ]
+        },
 
-            <div class="card">
-                <img src="img/daun-kering.png" alt="">
-                <h3>Daun Kering</h3>
-            </div>
+        b3: {
+            judul: "Sampah B3",
+            deskripsi: "Sampah yang mengandung bahan berbahaya dan beracun.",
+            contoh: [
+                ["img/baterai.png", "Baterai Bekas"],
+                ["img/lampu.png", "Lampu Bekas"],
+                ["img/oli.png", "Oli Bekas"]
+            ]
+        }
 
-            <div class="card">
-                <img src="img/kulit-buah.png" alt="">
-                <h3>Kulit Buah</h3>
-            </div>
-        `;
-    }
+    };
 
-    else if (jenis == "anorganik") {
+    if (dataSampah[jenis]) {
 
-        judul.innerHTML = "Sampah Anorganik";
+        const data = dataSampah[jenis];
 
-        penjelasan.innerHTML =
-            "Sampah yang sulit terurai namun masih dapat didaur ulang.";
+        judul.innerHTML = data.judul;
+        penjelasan.innerHTML = data.deskripsi;
 
-        card.innerHTML = `
-            <div class="card">
-                <img src="img/botol-plastik.png" alt="">
-                <h3>Botol Plastik</h3>
-            </div>
+        card.innerHTML = "";
 
-            <div class="card">
-                <img src="img/kaleng.png" alt="">
-                <h3>Kaleng</h3>
-            </div>
+        data.contoh.forEach(item => {
 
-            <div class="card">
-                <img src="img/kertas.png" alt="">
-                <h3>Kertas</h3>
-            </div>
-        `;
-    }
-
-    else if (jenis == "b3") {
-
-        judul.innerHTML = "Sampah B3";
-
-        penjelasan.innerHTML =
-            "Sampah yang mengandung bahan berbahaya dan beracun.";
-
-        card.innerHTML = `
-            <div class="card">
-                <img src="img/baterai.png" alt="">
-                <h3>Baterai Bekas</h3>
-            </div>
+            card.innerHTML += `
 
             <div class="card">
-                <img src="img/lampu.png" alt="">
-                <h3>Lampu Bekas</h3>
+
+                <img src="${item[0]}" alt="${item[1]}">
+
+                <h3>${item[1]}</h3>
+
             </div>
 
-            <div class="card">
-                <img src="img/oli.png" alt="">
-                <h3>Oli Bekas</h3>
-            </div>
-        `;
+            `;
+
+        });
+
     }
 
 }
 
-/* =========================================
+
+/* =====================================================
    NAVBAR SCROLL
-========================================= */
+===================================================== */
 
 const navbar = document.getElementById("navbar");
 
 if (navbar) {
 
-    window.addEventListener("scroll", function () {
+    window.addEventListener("scroll", () => {
 
-        if (window.scrollY > 30) {
-            navbar.classList.add("scrolled");
-        } else {
-            navbar.classList.remove("scrolled");
-        }
+        navbar.classList.toggle("scrolled", window.scrollY > 30);
 
     });
 
 }
 
-/* =========================================
-   COUNTER SECTION 
-========================================= */
+
+/* =====================================================
+   COUNTER STATISTIK
+===================================================== */
 
 const statistikSection = document.querySelector("#statistik");
-const counters = document.querySelectorAll(".counter");
 
-let sudahJalan = false;
+if (statistikSection) {
 
-const observer = new IntersectionObserver((entries) => {
+    const counters = document.querySelectorAll(".counter");
 
-    entries.forEach(entry => {
+    let sudahJalan = false;
 
-        if(entry.isIntersecting && !sudahJalan){
+    const observer = new IntersectionObserver((entries) => {
 
-            counters.forEach(counter => {
+        entries.forEach(entry => {
 
-                const target = Number(counter.dataset.target);
-                let current = 0;
+            if (entry.isIntersecting && !sudahJalan) {
 
-               const increment = target / 290;
+                counters.forEach(counter => {
 
-                function updateCounter(){
+                    const target = Number(counter.dataset.target);
 
-                    current += increment;
+                    let current = 0;
 
-                    if(current < target){
+                    const increment = target / 290;
 
-                        counter.innerText =
-                        Math.ceil(current).toLocaleString("id-ID");
+                    function updateCounter() {
 
-                        requestAnimationFrame(updateCounter);
+                        current += increment;
 
-                    }else{
+                        if (current < target) {
 
-                        counter.innerText =
-                        target.toLocaleString("id-ID");
+                            counter.innerHTML =
+                                Math.ceil(current).toLocaleString("id-ID");
+
+                            requestAnimationFrame(updateCounter);
+
+                        } else {
+
+                            counter.innerHTML =
+                                target.toLocaleString("id-ID");
+
+                        }
 
                     }
 
-                }
+                    updateCounter();
 
-                updateCounter();
+                });
 
-            });
+                sudahJalan = true;
 
-            sudahJalan = true;
+            }
 
-        }
+        });
+
+    }, {
+
+        threshold: 0.5
 
     });
 
-},{
-    threshold:0.5
-});
+    observer.observe(statistikSection);
 
-observer.observe(statistikSection);
+}
+
+/* =====================================================
+   LOKASI PENGGUNA & NAVIGASI BANK SAMPAH
+===================================================== */
+
+const btnLokasi = document.getElementById("btnLokasi");
+
+if (btnLokasi) {
+
+    let userLat = null;
+    let userLng = null;
+
+    btnLokasi.addEventListener("click", ambilLokasi);
+
+    function ambilLokasi() {
+
+        const status = document.getElementById("statusLokasi");
+        const koordinat = document.getElementById("koordinat");
+
+        if (!navigator.geolocation) {
+
+            status.innerHTML = "❌ Browser tidak mendukung Geolocation.";
+            return;
+
+        }
+
+        status.innerHTML = "📍 Mengambil lokasi Anda...";
+
+        navigator.geolocation.getCurrentPosition(
+
+            function(position){
+
+                userLat = position.coords.latitude;
+                userLng = position.coords.longitude;
+
+                status.innerHTML = "✅ Lokasi berhasil ditemukan";
+
+                koordinat.innerHTML =
+                `
+                Latitude : ${userLat.toFixed(6)}
+                <br>
+                Longitude : ${userLng.toFixed(6)}
+                `;
+
+                hitungSemuaJarak();
+
+            },
+
+            function(){
+
+                status.innerHTML =
+                "❌ Izin lokasi ditolak atau lokasi tidak tersedia.";
+
+            }
+
+        );
+
+    }
+
+/* ===========================
+   HITUNG SEMUA CARD
+=========================== */
+
+function hitungSemuaJarak(){
+
+    const cards = document.querySelectorAll(".lokasi-card");
+    const container = document.querySelector(".lokasi-container");
+
+    const daftar = [];
+
+    cards.forEach(card=>{
+
+        const lat = Number(card.dataset.lat);
+        const lng = Number(card.dataset.lng);
+
+        const jarak = hitungJarak(userLat,userLng,lat,lng);
+
+        // Update teks jarak
+        card.querySelector(".jarak").innerHTML =
+        `📏 ${jarak.toFixed(2)} km`;
+
+        // Tombol navigasi
+        const tombol = card.querySelector(".btn-navigasi");
+
+        tombol.onclick = function(){
+
+            const url =
+            `https://www.google.com/maps/dir/${userLat},${userLng}/${lat},${lng}`;
+
+            window.open(url,"_blank");
+
+        };
+
+        // Simpan data untuk diurutkan
+        daftar.push({
+
+            element: card,
+            jarak: jarak
+
+        });
+
+    });
+
+    /* ===========================
+       URUTKAN BERDASARKAN JARAK
+    =========================== */
+
+    daftar.sort((a,b)=>a.jarak-b.jarak);
+
+    /* ===========================
+       PINDAHKAN CARD
+    =========================== */
+
+    daftar.forEach(item=>{
+
+        container.appendChild(item.element);
+
+    });
+
+    /* ===========================
+       HAPUS BADGE LAMA
+    =========================== */
+
+    document.querySelectorAll(".terdekat").forEach(badge=>{
+
+        badge.remove();
+
+    });
+
+    /* ===========================
+       TAMBAH BADGE BARU
+    =========================== */
+
+    const info =
+    daftar[0].element.querySelector(".lokasi-info");
+
+    const badge =
+    document.createElement("div");
+
+    badge.className = "terdekat";
+
+    badge.innerHTML = "⭐ Bank Sampah Terdekat";
+
+    info.appendChild(badge);
+
+}
+
+        }

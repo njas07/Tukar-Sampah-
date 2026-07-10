@@ -11,154 +11,481 @@
 </head>
 
 <body>
+<!-- =========================
+        NAVBAR
+========================= -->
 
-    <!-- =========================
-         NAVBAR
-    ========================== -->
- <nav id="navbar">
-    <div class="container">
+<header class="header">
 
-        <div class="logo">
-            Tukar Sampah
+    <nav id="navbar">
+
+        <div class="container navbar-container">
+
+            <!-- Logo -->
+            <a href="Tukar Sampah.html" class="logo">
+
+                <div class="logo-icon">
+                    <img src="img/maskot tukar sampah.png" alt="Logo Maskot">
+                </div>
+
+                <div class="logo-text">
+
+                    <h2>Tukar Sampah</h2>
+
+                    <span>Recycle • Reward • Reuse</span>
+
+                </div>
+
+            </a>
+
+            <!-- Menu -->
+            <ul class="nav-links" id="navLinks">
+
+                <li>
+                    <a class="active" href="Tukar Sampah.html">
+                        Beranda
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        Tentang Kami
+                    </a>
+                </li>
+
+                <li>
+                    <a href="edukasi.html">
+                        Edukasi
+                    </a>
+                </li>
+
+                <li>
+                    <a href="reward.html">
+                        Reward
+                    </a>
+                </li>
+
+                <li>
+                    <a href="lokasi.html">
+                        Lokasi
+                    </a>
+                </li>
+
+            </ul>
+
+            <!-- Kanan -->
+            <div class="navbar-right">
+
+                <div class="search-box">
+
+                    <input
+                        type="text"
+                        placeholder="Cari..."
+                    >
+
+                    <button type="button">
+
+                        🔍
+
+                    </button>
+
+                </div>
+
+                <a href="#" class="btn-login">
+
+                    Masuk
+
+                </a>
+
+                <button
+                    id="menuToggle"
+                    class="menu-toggle"
+                    type="button"
+                    aria-label="Menu">
+
+                    ☰
+
+                </button>
+
+            </div>
+
         </div>
 
-        <ul class="nav-links">
-            <li><a href="Tukar Sampah.html">Beranda</a></li>
-            <li><a href="about.html">Tentang Kami</a></li>
-            <li><a href="edukasi.html">Edukasi</a></li>
-            <li><a href="reward.html">Reward</a></li>
-            <li><a href="lokasi.html">Lokasi</a></li>
-        </ul>
+    </nav>
 
-        <div class="nav-button">
-            <a href="#">Masuk</a>
+</header>
+
+<!-- ===================================================
+                    HERO
+=================================================== -->
+
+<section id="hero">
+
+    <div class="container hero-container">
+
+        <!-- LEFT -->
+
+        <div class="hero-content">
+
+            
+
+            <h1>
+
+                Sampahmu
+                <br>
+
+                Bisa Jadi
+                <span>Penghasilan</span>
+
+            </h1>
+
+            <p>
+
+                
+
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#cara-kerja" class="btn-primary">
+
+                    Mulai Menabung
+
+                </a>
+
+                <a href="#edukasi" class="btn-secondary">
+
+                    Pelajari Cara Kerja
+
+                </a>
+
+            </div>
+
+            </div>
+
+        <!-- RIGHT -->
+
+        <div class="hero-image">
+
+            <div class="hero-circle"></div>
+
+            <img
+                src="img/maskot utama.png"
+                class="hero-maskot"
+                alt="Maskot">
+
         </div>
 
     </div>
-</nav>
 
-    <!-- =========================
-         HERO SECTION
-    ========================== -->
-    <section id="hero">
-        <div class="container hero-container">
+</section>
 
-            <div class="hero-text">
+<!-- =====================================================
+                    STATISTIK 
+====================================================== -->
 
-                <h1>
-                    Sampahmu <br>
-                    Bisa Jadi <span>Penghasilan</span>
-                </h1>
-
-                <p>
-                    Kumpulkan sampah, dapatkan poin,
-                    dan tukarkan dengan berbagai reward
-                    menarik bersama Tukar Sampah.
-                </p>
-
-                <div class="hero-buttons">
-                    <a href="#" class="btn-primary">
-                        Mulai Menabung Sampah
-                    </a>
-
-                    <a href="#" class="btn-secondary">
-                        Pelajari Cara Kerja
-                    </a>
-                </div>
-
-            </div>
-
-            <div class="hero-image">
-                <img src="img/latar-belakang-sampah.png" alt="latar belakang">
-            </div>
-
-        </div>
-    </section>
-
-<!-- =========================
-        STATISTIK
-========================== -->
 <section id="statistik">
+
     <div class="container">
 
+        <!-- Heading -->
         <div class="statistik-title">
-            <h2>Dampak Bersama</h2>
+
+            <span class="section-badge">
+
+                Dampak Nyata Bersama
+
+            </span>
+
+            <h2>
+
+                Bersama Mewujudkan
+                <span>Lingkungan Lebih Bersih</span>
+
+            </h2>
+
+            <div class="title-line"></div>
+
             <p>
-                Bersama ribuan pengguna, kita telah membantu mengurangi
-                pencemaran lingkungan melalui program Tukar Sampah.
+
+                Setiap sampah yang Anda tukarkan membantu menjaga lingkungan,
+                mengurangi pencemaran, serta memberikan manfaat ekonomi bagi
+                masyarakat melalui jaringan Bank Sampah Indonesia.
+
             </p>
+
         </div>
 
+
+        <!-- Card -->
         <div class="statistik-grid">
 
+            <!-- ====================== -->
             <!-- Sampah -->
+            <!-- ====================== -->
+
             <div class="stat-card">
 
                 <div class="stat-icon">
+
                     <img src="img/sampah.png" alt="Sampah">
+
                 </div>
 
-                <h3 class="counter" data-target="12450">0</h3>
+                <span class="stat-live">
 
-                <span>Sampah Terkumpul</span>
+                    ● Live
+
+                </span>
+
+                <h3
+                    class="counter"
+                    data-target="12450">
+
+                    0
+
+                </h3>
+
+                <div class="stat-growth">
+
+                    +235 Kg Minggu Ini
+
+                </div>
+
+                <span class="stat-title">
+
+                    Sampah Terkumpul
+
+                </span>
 
                 <p>
-                    Sampah yang berhasil dikumpulkan
-                    dan diproses menjadi lebih bermanfaat.
+
+                    Sampah yang berhasil dipilah,
+                    dikumpulkan,
+                    dan diproses menjadi
+                    sumber daya yang lebih bermanfaat.
+
                 </p>
+
+                <div class="progress">
+
+                    <div
+                        class="progress-bar"
+                        style="width:90%;">
+
+                    </div>
+
+                </div>
 
             </div>
 
+            <!-- ====================== -->
             <!-- Pengguna -->
+            <!-- ====================== -->
+
             <div class="stat-card">
 
                 <div class="stat-icon">
+
                     <img src="img/user.png" alt="User">
+
                 </div>
 
-                <h3 class="counter" data-target="5230">0</h3>
+                <span class="stat-live">
 
-                <span>Pengguna Aktif</span>
+                    ● Update
+
+                </span>
+
+                <h3
+                    class="counter"
+                    data-target="5230">
+
+                    0
+
+                </h3>
+
+                <div class="stat-growth">
+
+                    +145 Pengguna Baru
+
+                </div>
+
+                <span class="stat-title">
+
+                    Pengguna Aktif
+
+                </span>
 
                 <p>
-                    Masyarakat yang aktif menabung
-                    sampah setiap bulannya.
+
+                    Masyarakat yang aktif
+                    menabung sampah,
+                    memperoleh poin,
+                    dan ikut menjaga lingkungan.
+
                 </p>
+
+                <div class="progress">
+
+                    <div
+                        class="progress-bar"
+                        style="width:78%;">
+
+                    </div>
+
+                </div>
 
             </div>
 
+
+            <!-- ====================== -->
             <!-- Bank Sampah -->
+            <!-- ====================== -->
+
             <div class="stat-card">
 
                 <div class="stat-icon">
+
                     <img src="img/bank-sampah.png" alt="Bank Sampah">
+
                 </div>
 
-                <h3 class="counter" data-target="325">0</h3>
+                <span class="stat-live">
 
-                <span>Bank Sampah</span>
+                    ● Bertambah
+
+                </span>
+
+                <h3
+                    class="counter"
+                    data-target="325">
+
+                    0
+
+                </h3>
+
+                <div class="stat-growth">
+
+                    +8 Mitra Baru
+
+                </div>
+
+                <span class="stat-title">
+
+                    Bank Sampah
+
+                </span>
 
                 <p>
-                    Mitra bank sampah yang telah
-                    bergabung di berbagai daerah.
+
+                    Mitra bank sampah
+                    yang tersebar
+                    di berbagai wilayah
+                    Indonesia.
+
                 </p>
+
+                <div class="progress">
+
+                    <div
+                        class="progress-bar"
+                        style="width:65%;">
+
+                    </div>
+
+                </div>
 
             </div>
 
+
+            <!-- ====================== -->
             <!-- Reward -->
+            <!-- ====================== -->
+
             <div class="stat-card">
 
                 <div class="stat-icon">
+
                     <img src="img/reward-icon.png" alt="Reward">
+
                 </div>
 
-                <h3 class="counter" data-target="1250">0</h3>
+                <span class="stat-live">
 
-                <span>Reward Ditukar</span>
+                    ● Hari Ini
+
+                </span>
+
+                <h3
+                    class="counter"
+                    data-target="1250">
+
+                    0
+
+                </h3>
+
+                <div class="stat-growth">
+
+                    +54 Reward
+
+                </div>
+
+                <span class="stat-title">
+
+                    Reward Ditukar
+
+                </span>
 
                 <p>
-                    Hadiah yang telah berhasil
-                    ditukarkan oleh para pengguna.
+
+                    Hadiah yang telah
+                    berhasil ditukarkan
+                    sebagai bentuk apresiasi
+                    kepada pengguna.
+
+                </p>
+
+                <div class="progress">
+
+                    <div
+                        class="progress-bar"
+                        style="width:82%;">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Bottom Summary -->
+
+        <div class="statistik-footer">
+
+            <div class="summary-card">
+
+                🌿
+
+                <h3>
+
+                    Bersama Kita Bisa Mengurangi
+                    Dampak Sampah
+
+                </h3>
+
+                <p>
+
+                    Setiap botol plastik,
+                    kardus,
+                    kaleng,
+                    dan kertas
+                    yang Anda tukarkan
+                    memberikan dampak positif
+                    bagi bumi.
+
                 </p>
 
             </div>
@@ -166,347 +493,1580 @@
         </div>
 
     </div>
+
 </section>
 
-    <!-- =========================
-         CARA KERJA
-    ========================== -->
-    <section id="cara-kerja">
-        <div class="container">
+  <!-- =====================================================
+                    CARA KERJA 
+====================================================== -->
 
-            <div class="cara-title">
-                <h2>Cara Kerja</h2>
-            </div>
+<section id="cara-kerja">
 
-            <div class="cara-container">
-
-                <div class="cara-card">
-                    <div class="nomor">1</div>
-                    <img src="img/pilah-sampah.png" alt="Pilah Sampah">
-                    <h3>Pilah Sampah</h3>
-                    <p>
-                        Pilah sampah yang bisa didaur ulang
-                        di rumah atau lingkungan sekitar.
-                    </p>
-                </div>
-
-                <div class="cara-card">
-                    
-                    <div class="nomor">2</div>
-                    <img src="img/setor-sampah.png" alt="Setor Sampah">
-                    <h3>Setor Sampah</h3>
-                    <p>
-                        Setor sampah yang telah dikumpulkan
-                        di lokasi penukaran sampah terdekat.
-                    </p>
-                </div>
-
-                <div class="cara-card">
-                    <div class="nomor">3</div>
-                    <img src="img/dapatkan-point.png" alt="dapatkan-point">
-                    <h3>Dapatkan Point</h3>
-                    <p>
-                        Dapatkan point sebagai penghargaan atas kontribusi Anda
-                        dalam mengumpulkan dan menyetorkan sampah.
-                    </p>
-                </div>
-
-                <div class="cara-card">
-                    <div class="nomor">4</div>
-                    <img src="img/tukar-reward.png" alt="tukar-reward">
-                    <h3>Tukar Reward</h3>
-                    <p>
-                        Tukarkan point yang telah dikumpulkan
-                        dengan berbagai reward menarik.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- =========================
-         JENIS SAMPAH
-    ========================== -->
-    <section id="jenis-sampah">
-        <div class="container">
-
-            <div class="jenis-sampah-title">
-                <h2>Jenis Sampah</h2>
-            </div>
-
-            <div class="jenis-sampah-container">
-                <!-- organik -->
-                <div class="jenis-sampah-card">
-                    <img src="" alt="">
-                    <h3>Sampah Organik</h3>
-                    <p>Sampah yang berasal dari bahan-bahan alami dan dapat terurai secara alami.</p>
-                    <a href="contoh-jenis-sampah.html?jenis=organik" class="btn-contoh">Contoh</a>
-
-                    <div class="contoh-container">
-                        <div class="contoh-card">
-                            <img src="" alt="">
-                            <p>Sisa makanan</p>
-                        </div>
-                        <div class="contoh-card">
-                            <img src="" alt="">
-                            <p>Daun kering</p>
-                        </div>
-                        <div class="contoh-card">
-                            <img src="" alt="">
-                            <p>Cangkang telur</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- anorganik -->
-                <div class="jenis-sampah-card">
-                    <img src="" alt="">
-                    <h3>Sampah Anorganik</h3>
-                    <p>Sampah yang tidak dapat terurai secara alami dan biasanya terbuat dari bahan kimia.</p>
-                    <a href="contoh-jenis-sampah.html?jenis=anorganik" class="btn-contoh">Contoh</a>
-
-                    <div class="contoh-container">
-                        <div class="contoh-card">
-                            <img src="" alt="">
-                            <p>Plastik</p>
-                        </div>
-                        <div class="contoh-card">
-                            <img src="" alt="">
-                            <p>Kertas</p>
-                        </div>
-                        <div class="contoh-card">
-                            <img src="" alt="">
-                            <p>Kaleng</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- B3 -->
-                <div class="jenis-sampah-card">
-                    <img src="" alt="">
-                    <h3>Sampah B3</h3>
-                    <p>Sampah yang mengandung bahan berbahaya dan beracun, seperti limbah medis atau bahan kimia.</p>
-                    <a href="contoh-jenis-sampah.html?jenis=b3" class="btn-contoh">Contoh</a>
-
-                    <div class="contoh-container">
-                        <div class="contoh-card">
-                            <img src="" alt="">
-                            <p>Limbah medis</p>
-                        </div>
-                        <div class="contoh-card">
-                            <img src="" alt="">
-                            <p>Baterai bekas</p>
-                        </div>
-                        <div class="contoh-card">
-                            <img src="" alt="">
-                            <p>Obat kadaluarsa</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- =========================
-        EDUKASI
-========================== -->
-<section id="edukasi">
     <div class="container">
+
+        <!-- Heading -->
+
+        <div class="cara-title">
+
+            <span class="section-badge">
+
+                Cara Kerja
+
+            </span>
+
+            <h2>
+
+                Menabung Sampah
+                <span>Lebih Mudah Dalam 4 Langkah</span>
+
+            </h2>
+
+            <div class="title-line"></div>
+
+            <p>
+
+                Hanya dengan empat langkah sederhana,
+                Anda sudah dapat mengubah sampah menjadi
+                poin dan berbagai reward menarik.
+
+            </p>
+
+        </div>
+
+
+        <!-- Timeline -->
+
+        <div class="cara-container">
+
+            <!-- STEP 1 -->
+
+            <div class="cara-card">
+
+                <div class="step-number">
+
+                    01
+
+                </div>
+
+                <div class="step-icon">
+
+                    <img
+                        src="img/pilah-sampah.png"
+                        alt="Pilah Sampah">
+
+                </div>
+
+                <h3>
+
+                    Pilah Sampah
+
+                </h3>
+
+                <p>
+
+                    Pisahkan sampah organik,
+                    anorganik,
+                    maupun B3 agar proses
+                    pengelolaan menjadi
+                    lebih efektif.
+
+                </p>
+
+                <span class="step-time">
+
+                    ⏱ ± 5 Menit
+
+                </span>
+
+            </div>
+
+
+            <!-- STEP 2 -->
+
+            <div class="cara-card">
+
+                <div class="step-number">
+
+                    02
+
+                </div>
+
+                <div class="step-icon">
+
+                    <img
+                        src="img/setor-sampah.png"
+                        alt="Setor Sampah">
+
+                </div>
+
+                <h3>
+
+                    Setor Sampah
+
+                </h3>
+
+                <p>
+
+                    Datangi Bank Sampah
+                    terdekat dan serahkan
+                    sampah yang telah
+                    dipilah sebelumnya.
+
+                </p>
+
+                <span class="step-time">
+
+                    Bank Sampah Terdekat
+
+                </span>
+
+            </div>
+
+
+            <!-- STEP 3 -->
+
+            <div class="cara-card">
+
+                <div class="step-number">
+
+                    03
+
+                </div>
+
+                <div class="step-icon">
+
+                    <img
+                        src="img/dapatkan-point.png"
+                        alt="Point">
+
+                </div>
+
+                <h3>
+
+                    Dapatkan Poin
+
+                </h3>
+
+                <p>
+
+                    Setiap kilogram sampah
+                    memiliki nilai poin
+                    yang akan otomatis
+                    ditambahkan ke akun Anda.
+
+                </p>
+
+                <span class="step-time">
+
+                    Poin Bertambah
+
+                </span>
+
+            </div>
+
+
+            <!-- STEP 4 -->
+
+            <div class="cara-card">
+
+                <div class="step-number">
+
+                    04
+
+                </div>
+
+                <div class="step-icon">
+
+                    <img
+                        src="img/tukar-reward.png"
+                        alt="Reward">
+
+                </div>
+
+                <h3>
+
+                    Tukar Reward
+
+                </h3>
+
+                <p>
+
+                    Gunakan poin yang
+                    terkumpul untuk
+                    mendapatkan berbagai
+                    hadiah menarik.
+
+                </p>
+
+                <span class="step-time">
+
+                    🏆 Reward Menarik
+
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Summary -->
+
+        <div class="cara-summary">
+
+            <div class="summary-box">
+
+                <h3>
+
+                    🌿 Setiap Langkah Membawa Perubahan
+
+                </h3>
+
+                <p>
+
+                    Semakin banyak masyarakat yang
+                    berpartisipasi,
+                    semakin besar dampak positif
+                    terhadap lingkungan
+                    dan ekonomi sirkular Indonesia.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+  <!-- =====================================================
+                    JENIS SAMPAH 
+====================================================== -->
+
+<section id="jenis-sampah">
+
+    <div class="container">
+
+        <!-- =========================
+                HEADING
+        ========================== -->
+
+        <div class="jenis-sampah-title">
+
+            <span class="section-badge">
+
+                ♻ Edukasi Sampah
+
+            </span>
+
+            <h2>
+
+                Kenali Jenis
+                <span>Sampah di Sekitarmu</span>
+
+            </h2>
+
+            <div class="title-line"></div>
+
+            <p>
+
+                Memahami jenis sampah adalah langkah awal
+                untuk menciptakan lingkungan yang bersih
+                dan meningkatkan proses daur ulang.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- =========================
+                CARD CONTAINER
+        ========================== -->
+
+        <div class="jenis-sampah-container">
+
+            <!-- =========================
+                    ORGANIK
+            ========================== -->
+
+            <article class="jenis-sampah-card organik">
+
+                <div class="card-top">
+
+                    <span class="jenis-badge">
+
+                        🌿 Organik
+
+                    </span>
+
+                    <img
+                        src="img/organik.png"
+                        alt="Sampah Organik">
+
+                </div>
+
+                <h3>
+
+                    Sampah Organik
+
+                </h3>
+
+                <p>
+
+                    Sampah yang berasal
+                    dari makhluk hidup
+                    dan mudah terurai
+                    secara alami.
+
+                </p>
+
+                <div class="contoh-list">
+
+                    <span> Sisa Sayur</span>
+
+                    <span> Kulit Buah</span>
+
+                    <span>Daun Kering</span>
+
+                </div>
+
+                <div class="card-footer">
+
+                    <a
+                        href="contoh-jenis-sampah.html?jenis=organik"
+                        class="btn-contoh">
+
+                        Lihat Contoh →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =========================
+                    ANORGANIK
+            ========================== -->
+
+            <article class="jenis-sampah-card anorganik">
+
+                <div class="card-top">
+
+                    <span class="jenis-badge">
+
+                        ♻ Anorganik
+
+                    </span>
+
+                    <img
+                        src="img/anorganik.png"
+                        alt="Sampah Anorganik">
+
+                </div>
+
+                <h3>
+
+                    Sampah Anorganik
+
+                </h3>
+
+                <p>
+
+                    Sampah yang berasal
+                    dari bahan buatan
+                    dan membutuhkan
+                    waktu lama untuk terurai.
+
+                </p>
+
+                <div class="contoh-list">
+
+                    <span> Botol Plastik</span>
+
+                    <span> Kaleng</span>
+
+                    <span>Kertas</span>
+
+                </div>
+
+                <div class="card-footer">
+
+                    <a
+                        href="contoh-jenis-sampah.html?jenis=anorganik"
+                        class="btn-contoh">
+
+                        Lihat Contoh →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =========================
+                    B3
+            ========================== -->
+
+            <article class="jenis-sampah-card b3">
+
+                <div class="card-top">
+
+                    <span class="jenis-badge">
+
+                        ⚠ B3
+
+                    </span>
+
+                    <img
+                        src="img/b3.png"
+                        alt="Sampah B3">
+
+                </div>
+
+                <h3>
+
+                    Sampah B3
+
+                </h3>
+
+                <p>
+
+                    Sampah yang mengandung
+                    bahan berbahaya
+                    dan harus dikelola
+                    secara khusus.
+
+                </p>
+
+                <div class="contoh-list">
+
+                    <span> Baterai</span>
+
+                    <span> Obat Kadaluarsa</span>
+
+                    <span> Limbah Kimia</span>
+
+                </div>
+
+                <div class="card-footer">
+
+                    <a
+                        href="contoh-jenis-sampah.html?jenis=b3"
+                        class="btn-contoh">
+
+                        Lihat Contoh →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+
+
+        <!-- =========================
+                BOTTOM INFO
+        ========================== -->
+
+        <div class="jenis-info">
+
+            <div class="info-box">
+
+                <h3>
+
+                    🌍 Mengapa Harus Dipilah?
+
+                </h3>
+
+                <p>
+
+                    Dengan memilah sampah sejak dari rumah,
+                    proses daur ulang menjadi lebih mudah,
+                    pencemaran lingkungan dapat dikurangi,
+                    dan nilai ekonomi sampah meningkat.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =====================================================
+                    EDUKASI 
+====================================================== -->
+
+<section id="edukasi">
+
+    <div class="container">
+
+        <!-- =========================
+                HEADING
+        ========================== -->
 
         <div class="edukasi-header">
-            <h2>Edukasi</h2>
 
-            <a href="edukasi.html" class="lihat-semua">
-                Lihat Semua
+            <div>
+
+                <span class="section-badge">
+
+                    📚 Edukasi Lingkungan
+
+                </span>
+
+                <h2>
+
+                    Belajar Menjaga
+                    <span>Bumi Bersama</span>
+
+                </h2>
+
+                <p>
+
+                    Tingkatkan wawasan mengenai pengelolaan
+                    sampah, daur ulang,
+                    dan gaya hidup ramah lingkungan.
+
+                </p>
+
+            </div>
+
+            <a
+                href="edukasi.html"
+                class="lihat-semua">
+
+                Lihat Semua →
+
             </a>
+
         </div>
+
+
+
+        <!-- =========================
+                CARD
+        ========================== -->
+
         <div class="edukasi-container">
 
-            <!-- Artikel 1 -->
-            <div class="edukasi-card">
-                <img src="img/memilah-sampah.jpg" alt="Memilah Sampah">
-                <div class="edukasi-text">
-                    <h3>Cara Memilah Sampah</h3>
-                    <p>
-                        Pelajari cara memilah sampah organik,
-                        anorganik, dan B3 agar proses
-                        daur ulang menjadi lebih mudah.
-                    </p>
-                    <a href="edukasi.html?artikel=pilah">
-                        Baca Selengkapnya →
-                    </a>
-                </div>
-            </div>
+            <!-- ========================= -->
 
-            <!-- Artikel 2 -->
-            <div class="edukasi-card">
-                <img src="img/plastik.jpg" alt="Bahaya Plastik">
-                <div class="edukasi-text">
-                    <h3>Bahaya Plastik</h3>
-                    <p>
-                        Ketahui dampak sampah plastik
-                        terhadap lingkungan dan kesehatan.
-                    </p>
-                    <a href="edukasi.html?artikel=plastik">
-                        Baca Selengkapnya →
-                    </a>
-                </div>
-            </div>
+            <article class="edukasi-card">
 
-            <!-- Artikel 3 -->
-            <div class="edukasi-card">
-                <img src="img/daur-ulang.jpg" alt="Daur Ulang">
-                <div class="edukasi-text">
-                    <h3>Daur Ulang Kreatif</h3>
-                    <p>
-                        Ubah sampah menjadi barang
-                        yang lebih bermanfaat dan
-                        memiliki nilai jual.
-                    </p>
-                    <a href="edukasi.html?artikel=daurulang">
-                        Baca Selengkapnya →
-                    </a>
+                <div class="artikel-image">
+
+                    <img
+                        src="img/memilah-sampah.jpg"
+                        alt="Memilah Sampah">
+
+                    <span class="kategori">
+
+                        Edukasi
+
+                    </span>
+
                 </div>
-            </div>
+
+                <div class="edukasi-text">
+
+                    <span class="tanggal">
+
+                        📅 12 Juli 2026
+
+                    </span>
+
+                    <h3>
+
+                        Cara Memilah Sampah
+                        Dengan Benar
+
+                    </h3>
+
+                    <p>
+
+                        Pelajari cara memilah
+                        sampah organik,
+                        anorganik,
+                        dan B3 agar proses
+                        daur ulang menjadi
+                        lebih maksimal.
+
+                    </p>
+
+                    <a
+                        href="edukasi.html?artikel=pilah">
+
+                        Baca Selengkapnya →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ========================= -->
+
+            <article class="edukasi-card">
+
+                <div class="artikel-image">
+
+                    <img
+                        src="img/plastik.jpg"
+                        alt="Plastik">
+
+                    <span class="kategori">
+
+                        Lingkungan
+
+                    </span>
+
+                </div>
+                
+                <div class="edukasi-text">
+
+                    <span class="tanggal">
+
+                        📅 18 Juli 2026
+
+                    </span>
+
+                    <h3>
+
+                        Bahaya Sampah Plastik
+                        Untuk Laut
+
+                    </h3>
+
+                    <p>
+
+                        Ketahui bagaimana
+                        sampah plastik
+                        mencemari laut,
+                        membahayakan hewan,
+                        dan kesehatan manusia.
+
+                    </p>
+
+                    <a
+                        href="edukasi.html?artikel=plastik">
+
+                        Baca Selengkapnya →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+            <!-- ========================= -->
+
+            <article class="edukasi-card">
+
+                <div class="artikel-image">
+
+                    <img
+                        src="img/daur-ulang.jpg"
+                        alt="Daur Ulang">
+
+                    <span class="kategori">
+
+                        Daur Ulang
+
+                    </span>
+
+                </div>
+
+                <div class="edukasi-text">
+
+                    <span class="tanggal">
+
+                        📅 25 Juli 2026
+
+                    </span>
+
+                    <h3>
+
+                        Ide Kreatif
+                        Daur Ulang Sampah
+
+                    </h3>
+
+                    <p>
+
+                        Temukan berbagai ide
+                        kreatif mengubah sampah
+                        menjadi produk yang
+                        bernilai ekonomi.
+
+                    </p>
+
+                    <a
+                        href="edukasi.html?artikel=daurulang">
+
+                        Baca Selengkapnya →
+
+                    </a>
+
+                </div>
+
+            </article>
+
         </div>
+
+
+
+        <!-- =========================
+                INFO BOX
+        ========================== -->
+
+        <div class="edukasi-info">
+
+            <div class="info-card">
+
+                <div class="info-icon">
+
+                    🌱
+
+                </div>
+
+                <div>
+
+                    <h3>
+
+                        Tahukah Kamu?
+
+                    </h3>
+
+                    <p>
+
+                        Satu botol plastik membutuhkan
+                        waktu hingga sekitar 450 tahun
+                        untuk terurai secara alami.
+                        Karena itu,
+                        mari mulai memilah
+                        dan mendaur ulang sampah
+                        sejak sekarang.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =========================
+                BUTTON
+        ========================== -->
 
         <div class="btn-edukasi">
-            <a href="edukasi.html" class="btn-lihat-semua">
-                Lihat Semua Artikel
+
+            <a
+                href="edukasi.html"
+                class="btn-lihat-semua">
+
+                Jelajahi Semua Artikel
+
             </a>
+
         </div>
+
     </div>
+
 </section>
 
-<!-- =========================
-            REWARD
-========================== -->
+<!-- =====================================================
+                    REWARD 
+====================================================== -->
+
 <section id="reward">
+
     <div class="container">
+
+        <!-- =========================
+                HEADER
+        ========================== -->
+
         <div class="reward-title">
-            <h2>Reward</h2>
+
+            <span class="section-badge">
+
+                Reward Eksklusif
+
+            </span>
+
+            <h2>
+
+                Tukarkan Poinmu
+                <span>Dengan Hadiah Menarik</span>
+
+            </h2>
+
+            <div class="title-line"></div>
+
             <p>
-                Kumpulkan poin dari setiap penukaran sampah dan tukarkan
-                dengan berbagai hadiah menarik.
+
+                Setiap sampah yang Anda tukarkan akan menghasilkan poin.
+                Kumpulkan poin tersebut dan nikmati berbagai hadiah
+                menarik sebagai bentuk apresiasi atas kontribusi Anda
+                menjaga lingkungan.
+
             </p>
+
         </div>
+
+
+        <!-- =========================
+                REWARD CARD
+        ========================== -->
 
         <div class="reward-container">
+
+
             <!-- Reward 1 -->
-            <div class="reward-card">
-                <img src="img/pulsa.png" alt="Pulsa">
-                <h3>Pulsa Rp10.000</h3>
-                <span>1000 Poin</span>
-            </div>
+
+            <article class="reward-card">
+
+                <div class="reward-badge">
+
+                    🔥 Favorit
+
+                </div>
+
+                <img
+                    src="img/pulsa.png"
+                    alt="Pulsa">
+
+                <div class="reward-content">
+
+                    <span class="reward-category">
+
+                        Digital
+
+                    </span>
+
+                    <h3>
+
+                        Pulsa Rp10.000
+
+                    </h3>
+
+                    <p>
+
+                        Tukarkan poin Anda
+                        menjadi pulsa semua operator.
+
+                    </p>
+
+                    <div class="reward-bottom">
+
+                        <strong>
+
+                            1.000 Poin
+
+                        </strong>
+
+                        <a
+                            href="reward.html">
+
+                            Tukar →
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
 
             <!-- Reward 2 -->
-            <div class="reward-card">
-                <img src="img/tumbler.png" alt="Tumbler">
-                <h3>Tumbler</h3>
-                <span>2000 Poin</span>
-            </div>
+
+            <article class="reward-card">
+
+                <div class="reward-badge">
+
+                    ⭐ Populer
+
+                </div>
+
+                <img
+                    src="img/tumbler.png"
+                    alt="Tumbler">
+
+                <div class="reward-content">
+
+                    <span class="reward-category">
+
+                        Merchandise
+
+                    </span>
+
+                    <h3>
+
+                        Tumbler Eco
+
+                    </h3>
+
+                    <p>
+
+                        Tumbler ramah lingkungan
+                        yang dapat digunakan
+                        setiap hari.
+
+                    </p>
+
+                    <div class="reward-bottom">
+
+                        <strong>
+
+                            2.000 Poin
+
+                        </strong>
+
+                        <a
+                            href="reward.html">
+
+                            Tukar →
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
 
             <!-- Reward 3 -->
-            <div class="reward-card">
-                <img src="img/voucher.png" alt="Voucher">
-                <h3>Voucher Belanja</h3>
-                <span>2500 Poin</span>
-            </div>
+
+            <article class="reward-card">
+
+                <div class="reward-badge">
+
+                    💚 Baru
+
+                </div>
+
+                <img
+                    src="img/voucher.png"
+                    alt="Voucher">
+
+                <div class="reward-content">
+
+                    <span class="reward-category">
+
+                        Voucher
+
+                    </span>
+
+                    <h3>
+
+                        Voucher Belanja
+
+                    </h3>
+
+                    <p>
+
+                        Gunakan voucher
+                        untuk berbelanja
+                        di merchant pilihan.
+
+                    </p>
+
+                    <div class="reward-bottom">
+
+                        <strong>
+
+                            2.500 Poin
+
+                        </strong>
+
+                        <a
+                            href="reward.html">
+
+                            Tukar →
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
         </div>
+
+
+
+        <!-- =========================
+                INFO
+        ========================== -->
+
+        <div class="reward-info">
+
+            <div class="reward-info-card">
+
+                <div class="reward-info-icon">
+
+                    💡
+
+                </div>
+
+                <div>
+
+                    <h3>
+
+                        Semakin Banyak Menabung,
+                        Semakin Banyak Hadiah
+
+                    </h3>
+
+                    <p>
+
+                        Poin akan terus bertambah
+                        setiap kali Anda menyetorkan
+                        sampah ke Bank Sampah mitra.
+                        Semakin aktif Anda berkontribusi,
+                        semakin banyak reward yang dapat
+                        ditukarkan.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =========================
+                BUTTON
+        ========================== -->
 
         <div class="reward-button">
-            <a href="reward.html" class="btn-reward">
+
+            <a
+                href="reward.html"
+                class="btn-reward">
+
                 Lihat Semua Reward →
+
             </a>
-        </div>
-    </div>
-</section>
 
-<!-- =========================
-            LOKASI
-========================== -->
+        </div>
+
+    </div>
+
+</section>
+<!-- =====================================================
+                    LOKASI 
+====================================================== -->
+
 <section id="lokasi">
+
     <div class="container">
-        
+
+        <!-- =========================
+                HEADER
+        ========================== -->
+
         <div class="lokasi-title">
-            <h2>Lokasi Bank Sampah</h2>
+
+            <span class="section-badge">
+
+                Lokasi Bank Sampah
+
+            </span>
+
+            <h2>
+
+                Temukan
+                <span>Bank Sampah Terdekat</span>
+
+            </h2>
+
+            <div class="title-line"></div>
+
             <p>
-                Temukan lokasi bank sampah terdekat untuk menukarkan sampahmu.
+
+                Gunakan fitur lokasi untuk menemukan
+                Bank Sampah terdekat, melihat jarak,
+                serta langsung membuka navigasi menuju lokasi.
+
             </p>
+
         </div>
 
-        <div class="lokasi-preview">
-            <img src="img/lokasi-preview.jpg" alt="Lokasi">
-            <div class="lokasi-text">
-                <h3>Bank Sampah Terdekat</h3>
-                <p>
-                    Cari bank sampah di sekitarmu dengan mudah.
-                    Klik tombol di bawah untuk melihat semua lokasi.
-                </p>
-                <a href="lokasi.html" class="btn-lokasi">
-                    Lihat Semua Lokasi →
-                </a>
+
+
+        <!-- =========================
+                CONTENT
+        ========================== -->
+
+        <div class="lokasi-home">
+
+
+            <!-- MAP -->
+
+            <div class="lokasi-image">
+
+                <div class="map-card">
+
+                    <img
+                        src="img/maps-preview.png"
+                        alt="Preview Maps">
+
+                    <div class="map-overlay">
+
+                        <span>
+
+                            325+
+                            Bank Sampah
+
+                        </span>
+
+                    </div>
+
+                </div>
+
             </div>
-        </div>
-    </div>
-</section>
 
-    <!-- =========================
-         FOOTER
-    ========================== -->
-  <footer>
+
+
+            <!-- CONTENT -->
+
+            <div class="lokasi-content">
+
+                <span class="lokasi-badge">
+
+                    🌿 Lokasi Selalu Diperbarui
+
+                </span>
+
+                <h3>
+
+                    Cari Lokasi
+                    Bank Sampah Terdekat
+
+                </h3>
+
+                <p>
+
+                    Website akan membantu Anda
+                    menemukan lokasi Bank Sampah
+                    berdasarkan posisi Anda
+                    menggunakan GPS
+                    serta menghitung jarak
+                    secara otomatis.
+
+                </p>
+
+
+
+                <div class="fitur-lokasi">
+
+                    <div class="fitur-item">
+
+                        📍
+
+                        <span>
+
+                            GPS Otomatis
+
+                        </span>
+
+                    </div>
+
+                    <div class="fitur-item">
+
+                        🧭
+
+                        <span>
+
+                            Navigasi Google Maps
+
+                        </span>
+
+                    </div>
+
+                    <div class="fitur-item">
+
+                        ⭐
+
+                        <span>
+
+                            Bank Sampah Terdekat
+
+                        </span>
+
+                    </div>
+
+                    <div class="fitur-item">
+
+                        📏
+
+                        <span>
+
+                            Perhitungan Jarak
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- CTA -->
+
+                <div class="lokasi-buttons">
+
+                    <a
+                        href="lokasi.html"
+                        class="btn-lokasi">
+
+                        Lihat Semua Lokasi
+
+                    </a>
+
+                    <a
+                        href="lokasi.html"
+                        class="btn-outline">
+
+                        Gunakan GPS
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =========================
+                INFO
+        ========================== -->
+
+        <div class="lokasi-info">
+
+            <div class="info-card">
+
+                <div class="info-icon">
+
+                    🌎
+
+                </div>
+
+                <div>
+
+                    <h3>
+
+                        Jaringan Bank Sampah Terus Bertambah
+
+                    </h3>
+
+                    <p>
+
+                        Saat ini telah tersedia
+                        lebih dari 325 mitra
+                        Bank Sampah yang tersebar
+                        di berbagai wilayah.
+                        Jumlah ini akan terus
+                        bertambah seiring
+                        berkembangnya komunitas
+                        peduli lingkungan.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =====================================================
+                    FOOTER 
+====================================================== -->
+
+<footer id="footer">
 
     <div class="container footer-container">
 
-        <!-- Kiri -->
+        <!-- ===================================== -->
+        <!-- BRAND -->
+        <!-- ===================================== -->
+
         <div class="footer-about">
 
-            <h2>Tukar Sampah</h2>
+            <div class="footer-logo">
+
+                <div class="footer-logo-icon">
+
+                    
+
+                </div>
+
+                <div>
+
+                    <h2>
+
+                        Tukar Sampah
+
+                    </h2>
+
+                    <span>
+
+                        Recycle • Reward • Reuse
+
+                    </span>
+
+                </div>
+
+            </div>
 
             <p>
+
                 Platform digital yang membantu masyarakat
-                menukar sampah menjadi poin dan reward
-                demi lingkungan yang lebih bersih.
+                mengubah sampah menjadi sesuatu yang
+                bernilai melalui sistem poin,
+                reward,
+                dan Bank Sampah terdekat.
+
+            </p>
+
+            <div class="footer-social">
+
+                <a href="#" aria-label="Instagram">
+
+                    
+
+                </a>
+
+                <a href="#" aria-label="Facebook">
+
+                    
+
+                </a>
+
+                <a href="#" aria-label="YouTube">
+
+                    
+                </a>
+
+                <a href="#" aria-label="WhatsApp">
+
+                    
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ===================================== -->
+        <!-- MENU -->
+        <!-- ===================================== -->
+
+        <div class="footer-menu">
+
+            <h3>
+
+                Navigasi
+
+            </h3>
+
+            <a href="Tukar Sampah.html">
+
+                Beranda
+
+            </a>
+
+            <a href="about.html">
+
+                Tentang Kami
+
+            </a>
+
+            <a href="edukasi.html">
+
+                 Edukasi
+
+            </a>
+
+            <a href="reward.html">
+
+                Reward
+
+            </a>
+
+            <a href="lokasi.html">
+
+                Lokasi
+
+            </a>
+
+        </div>
+
+
+
+        <!-- ===================================== -->
+        <!-- FITUR -->
+        <!-- ===================================== -->
+
+        <div class="footer-menu">
+
+            <h3>
+
+                Fitur
+
+            </h3>
+
+            <p>
+
+                 Tukar Sampah
+
+            </p>
+
+            <p>
+
+                 Edukasi Lingkungan
+
+            </p>
+
+            <p>
+
+                GPS Bank Sampah
+
+            </p>
+
+            <p>
+
+                Reward
+
+            </p>
+
+            <p>
+
+                Statistik
+
             </p>
 
         </div>
 
-        <!-- Menu -->
-        <div class="footer-menu">
 
-            <h3>Menu</h3>
 
-            <a href="Tukar Sampah.html">Beranda</a>
-            <a href="about.html">Tentang Kami</a>
-            <a href="edukasi.html">Edukasi</a>
-            <a href="reward.html">Reward</a>
-            <a href="lokasi.html">Lokasi</a>
+        <!-- ===================================== -->
+        <!-- KONTAK -->
+        <!-- ===================================== -->
 
-        </div>
-
-        <!-- Kontak -->
         <div class="footer-contact">
 
-            <h3>Kontak</h3>
+            <h3>
 
-            <p>📧 tukarsampah@gmail.com</p>
+                Hubungi Kami
 
-            <p>📞 +62 812-3456-7890</p>
+            </h3>
 
-            <p>📍 Denpasar, Bali</p>
+            <p>
+
+                tukarsampah@gmail.com
+
+            </p>
+
+            <p>
+
+                +62 812-3456-7890
+
+            </p>
+
+            <p>
+
+                Denpasar, Bali
+
+            </p>
+
+            <p>
+
+                Senin - Jumat
+
+                08.00 - 17.00
+
+            </p>
 
         </div>
 
     </div>
 
-    <hr>
+
+
+    <!-- ===================================== -->
+    <!-- FOOTER BOTTOM -->
+    <!-- ===================================== -->
 
     <div class="footer-bottom">
 
-        © 2026 Tukar Sampah | Dibuat Oleh Kicaw
+        <div class="container footer-bottom-container">
+
+            <p>
+
+                © 2026
+                <strong>Tukar Sampah</strong>
+
+                | Dibuat untuk Web Design Competition
+
+            </p>
+
+            <div class="footer-links">
+
+                <a href="#">
+
+                    Kebijakan Privasi
+
+                </a>
+
+                <span>
+
+                    •
+
+                </span>
+
+                <a href="#">
+
+                    Syarat & Ketentuan
+
+                </a>
+
+            </div>
+
+        </div>
 
     </div>
 
 </footer>
-
     <!-- JavaScript -->
     <script src="Tukar Sampah.js"></script>
 
