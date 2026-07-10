@@ -1,88 +1,167 @@
+/* =========================================
+   HALAMAN CONTOH JENIS SAMPAH
+========================================= */
+
 const judul = document.getElementById("judul");
+const penjelasan = document.getElementById("penjelasan");
+const card = document.getElementById("contoh-card");
 
-if (judul) {
+const parameter = new URLSearchParams(window.location.search);
+const jenis = parameter.get("jenis");
 
-    const parameter = new URLSearchParams(window.location.search);
-    const jenis = parameter.get("jenis");
-    const penjelasan = document.getElementById("penjelasan");
-    const card = document.getElementById("contoh-card");
+if (judul && penjelasan && card) {
 
-    if(jenis == "organik"){
-        // isi organik
+    if (jenis == "organik") {
+
+        judul.innerHTML = "Sampah Organik";
+
+        penjelasan.innerHTML =
+            "Sampah organik berasal dari makhluk hidup dan mudah terurai.";
+
+        card.innerHTML = `
+            <div class="card">
+                <img src="img/sisa-makanan.png" alt="">
+                <h3>Sisa Makanan</h3>
+            </div>
+
+            <div class="card">
+                <img src="img/daun-kering.png" alt="">
+                <h3>Daun Kering</h3>
+            </div>
+
+            <div class="card">
+                <img src="img/kulit-buah.png" alt="">
+                <h3>Kulit Buah</h3>
+            </div>
+        `;
     }
 
-    if(jenis == "anorganik"){
-        // isi anorganik
+    else if (jenis == "anorganik") {
+
+        judul.innerHTML = "Sampah Anorganik";
+
+        penjelasan.innerHTML =
+            "Sampah yang sulit terurai namun masih dapat didaur ulang.";
+
+        card.innerHTML = `
+            <div class="card">
+                <img src="img/botol-plastik.png" alt="">
+                <h3>Botol Plastik</h3>
+            </div>
+
+            <div class="card">
+                <img src="img/kaleng.png" alt="">
+                <h3>Kaleng</h3>
+            </div>
+
+            <div class="card">
+                <img src="img/kertas.png" alt="">
+                <h3>Kertas</h3>
+            </div>
+        `;
     }
 
-    if(jenis == "b3"){
-        // isi b3
+    else if (jenis == "b3") {
+
+        judul.innerHTML = "Sampah B3";
+
+        penjelasan.innerHTML =
+            "Sampah yang mengandung bahan berbahaya dan beracun.";
+
+        card.innerHTML = `
+            <div class="card">
+                <img src="img/baterai.png" alt="">
+                <h3>Baterai Bekas</h3>
+            </div>
+
+            <div class="card">
+                <img src="img/lampu.png" alt="">
+                <h3>Lampu Bekas</h3>
+            </div>
+
+            <div class="card">
+                <img src="img/oli.png" alt="">
+                <h3>Oli Bekas</h3>
+            </div>
+        `;
     }
 
 }
 
-if(jenis == "organik"){
-judul.innerHTML="Sampah Organik";
-penjelasan.innerHTML="Sampah organik berasal dari makhluk hidup dan mudah terurai.";
-card.innerHTML=`
+/* =========================================
+   NAVBAR SCROLL
+========================================= */
 
-<div class="card">
-<img src="img/sisa-makanan.png">
-<h3>Sisa Makanan</h3>
-</div>
+const navbar = document.getElementById("navbar");
 
-<div class="card">
-<img src="img/daun-kering.png">
-<h3>Daun Kering</h3>
-</div>
+if (navbar) {
 
-<div class="card">
-<img src="img/kulit-buah.png">
-<h3>Kulit Buah</h3>
-</div>
-`;
+    window.addEventListener("scroll", function () {
+
+        if (window.scrollY > 30) {
+            navbar.classList.add("scrolled");
+        } else {
+            navbar.classList.remove("scrolled");
+        }
+
+    });
+
 }
 
-if(jenis == "anorganik"){
-judul.innerHTML="Sampah Anorganik";
-penjelasan.innerHTML="Sampah yang sulit terurai namun dapat didaur ulang.";
-card.innerHTML=`
+/* =========================================
+   COUNTER SECTION 
+========================================= */
 
-<div class="card">
-<img src="img/botol-plastik.png">
-<h3>Botol Plastik</h3>
-</div>
+const statistikSection = document.querySelector("#statistik");
+const counters = document.querySelectorAll(".counter");
 
-<div class="card">
-<img src="img/kaleng.png">
-<h3>Kaleng</h3>
-</div>
+let sudahJalan = false;
 
-<div class="card">
-<img src="img/kertas.png">
-<h3>Kertas</h3>
-</div>
-`;
-}
+const observer = new IntersectionObserver((entries) => {
 
-if(jenis == "b3"){
-judul.innerHTML="Sampah B3";
-penjelasan.innerHTML="Sampah yang mengandung bahan berbahaya dan beracun.";
-card.innerHTML=`
+    entries.forEach(entry => {
 
-<div class="card">
-<img src="img/baterai.png">
-<h3>Baterai Bekas</h3>
-</div>
+        if(entry.isIntersecting && !sudahJalan){
 
-<div class="card">
-<img src="img/lampu.png">
-<h3>Lampu Bekas</h3>
-</div>
+            counters.forEach(counter => {
 
-<div class="card">
-<img src="img/oli.png">
-<h3>Oli Bekas</h3>
-</div>
-`;
-}
+                const target = Number(counter.dataset.target);
+                let current = 0;
+
+               const increment = target / 290;
+
+                function updateCounter(){
+
+                    current += increment;
+
+                    if(current < target){
+
+                        counter.innerText =
+                        Math.ceil(current).toLocaleString("id-ID");
+
+                        requestAnimationFrame(updateCounter);
+
+                    }else{
+
+                        counter.innerText =
+                        target.toLocaleString("id-ID");
+
+                    }
+
+                }
+
+                updateCounter();
+
+            });
+
+            sudahJalan = true;
+
+        }
+
+    });
+
+},{
+    threshold:0.5
+});
+
+observer.observe(statistikSection);

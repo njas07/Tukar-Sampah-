@@ -8,6 +8,19 @@
     box-sizing: border-box;
 }
 
+/* =====================================================
+   CSS VARIABLES
+===================================================== */
+:root{
+    --primary:#22C55E;
+    --primary-dark:#15803D;
+    --green:#166534;
+    --dark:#14532D;
+    --bg:#F8FAF8;
+    --white:#FFFFFF;
+    --text:#666666;
+}
+
 /* =========================
    GLOBAL
 ========================= */
@@ -73,6 +86,10 @@ nav .container{
 
 .nav-button a:hover{
     background: #16a34a;
+}
+
+nav.scrolled{
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
 
 /* =========================
@@ -147,7 +164,81 @@ nav .container{
    STATISTIK
 ========================= */
 
-/* Nanti isi di sini */
+#statistik{
+    padding:90px 0;
+    background:#F8FAF8;
+}
+
+.statistik-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.statistik-title h2{
+    font-size:42px;
+    color:#166534;
+    margin-bottom:15px;
+}
+
+.statistik-title p{
+    color:#666;
+    max-width:700px;
+    margin:auto;
+    line-height:1.8;
+}
+
+.statistik-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+}
+
+.stat-card{
+    background:#fff;
+    border-radius:22px;
+    padding:35px 25px;
+    text-align:center;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+    transition:.35s;
+}
+
+.stat-card:hover{
+    transform:translateY(-8px);
+}
+
+.stat-icon{
+    width:85px;
+    height:85px;
+    background:#E9FBEF;
+    border-radius:50%;
+    margin:auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.stat-icon img{
+    width:45px;
+}
+
+.stat-card h3{
+    font-size:34px;
+    color:#22C55E;
+}
+
+.stat-card span{
+    display:block;
+    font-weight:bold;
+    color:#14532D;
+    margin:10px 0;
+}
+
+.stat-card p{
+    color:#666;
+    line-height:1.6;
+    font-size:15px;
+}
 
 /* =========================
    CARA KERJA
@@ -401,153 +492,1079 @@ nav .container{
     background:#1b5e20;
 }
 
-/*==========================
-          REWARD
-==========================*/
+/* =========================
+   REWARD
+========================= */
+
 #reward{
-    padding:80px 0;
-    background:#F5F8F5;
+
+    padding:90px 0;
+
+    background:#F8FAF8;
 }
 
 .reward-title{
+
     text-align:center;
-    margin-bottom:45px;
+
+    margin-bottom:60px;
 }
 
 .reward-title h2{
-    font-size:36px;
-    color:#2E7D32;
+
+    font-size:42px;
+
+    color:#14532D;
+
     margin-bottom:15px;
 }
 
 .reward-title p{
+
+    max-width:650px;
+
+    margin:auto;
+
     color:#666;
+
+    line-height:1.8;
 }
 
 .reward-container{
-    display:flex;
-    justify-content:center;
-    gap:25px;
-    flex-wrap:wrap;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:35px;
 }
 
 .reward-card{
-    width:260px;
+
     background:white;
-    border-radius:18px;
-    padding:25px;
+
+    border-radius:25px;
+
+    padding:35px;
+
     text-align:center;
-    box-shadow:0 8px 20px rgba(0,0,0,.08);
-    transition:.3s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.35s;
 }
 
 .reward-card:hover{
-    transform:translateY(-8px);
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.15);
 }
 
 .reward-card img{
-    width:100px;
-    height:100px;
+
+    width:110px;
+
+    height:110px;
+
     object-fit:contain;
+
     margin-bottom:20px;
 }
 
 .reward-card h3{
-    color:#2E7D32;
+
+    color:#14532D;
+
+    font-size:24px;
+
     margin-bottom:15px;
 }
 
 .reward-card span{
+
     display:inline-block;
-    background:#43A047;
-    color:white;
-    padding:8px 18px;
+
+    background:#E8FFF0;
+
+    color:#16A34A;
+
+    font-weight:bold;
+
+    padding:10px 22px;
+
     border-radius:30px;
 }
 
 .reward-button{
+
     text-align:center;
-    margin-top:45px;
+
+    margin-top:50px;
 }
 
 .btn-reward{
+
     display:inline-block;
-    background:#2E7D32;
+
+    background:#22C55E;
+
     color:white;
+
     text-decoration:none;
-    padding:12px 30px;
-    border-radius:10px;
+
+    padding:15px 35px;
+
+    border-radius:40px;
+
+    font-weight:bold;
+
     transition:.3s;
 }
 
 .btn-reward:hover{
-    background:#1B5E20;
+
+    background:#15803D;
+
+    transform:translateY(-3px);
+}   
+
+/* =========================
+   HALAMAN REWARD
+========================= */
+
+#halaman-reward{
+
+    padding:90px 0;
+
+    background:#F8FAF8;
+
+    min-height:100vh;
 }
 
-/*==========================
-          LOKASI
-==========================*/
-#lokasi{
-    padding:80px 0;
-    background:#F5F8F5;
+/* Judul */
+
+.reward-title{
+
+    text-align:center;
+
+    margin-bottom:60px;
+}
+
+.reward-title h2{
+
+    font-size:46px;
+
+    color:#14532D;
+
+    margin-bottom:15px;
+}
+
+.reward-title p{
+
+    max-width:650px;
+
+    margin:auto;
+
+    color:#666;
+
+    line-height:1.8;
+
+    font-size:17px;
+}
+
+/* Grid */
+
+.reward-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:35px;
+}
+
+/* Card */
+
+.reward-card{
+
+    background:white;
+
+    border-radius:25px;
+
+    padding:35px;
+
+    text-align:center;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+    overflow:hidden;
+
+    position:relative;
+}
+
+.reward-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.15);
+}
+
+/* Garis Hijau Atas */
+
+.reward-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:6px;
+
+    background:#22C55E;
+}
+
+/* Gambar */
+
+.reward-card img{
+
+    width:110px;
+
+    height:110px;
+
+    object-fit:contain;
+
+    margin-bottom:20px;
+}
+
+/* Judul */
+
+.reward-card h3{
+
+    font-size:24px;
+
+    color:#14532D;
+
+    margin-bottom:18px;
+}
+
+/* Badge Poin */
+
+.reward-card span{
+
+    display:inline-block;
+
+    background:#E8FFF0;
+
+    color:#16A34A;
+
+    font-weight:bold;
+
+    padding:10px 22px;
+
+    border-radius:30px;
+
+    margin-bottom:25px;
+}
+
+/* Tombol */
+
+.reward-card a{
+
+    display:inline-block;
+
+    width:100%;
+
+    background:#22C55E;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:14px;
+
+    border-radius:12px;
+
+    font-weight:bold;
+
+    transition:.3s;
+}
+
+.reward-card a:hover{
+
+    background:#15803D;
+}
+
+/* Tombol Kembali */
+
+.reward-button{
+
+    text-align:center;
+
+    margin-top:60px;
+}
+
+.btn-reward{
+
+    display:inline-block;
+
+    background:#14532D;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:15px 35px;
+
+    border-radius:35px;
+
+    transition:.3s;
+}
+
+.btn-reward:hover{
+
+    background:#22C55E;
+}
+
+/* =========================
+        HALAMAN LOKASI
+========================= */
+
+#halaman-lokasi{
+    padding:90px 0;
+    background:#F8FAF8;
 }
 
 .lokasi-title{
     text-align:center;
-    margin-bottom:40px;
+    margin-bottom:45px;
 }
 
 .lokasi-title h2{
-    color:#2E7D32;
-    font-size:36px;
+    font-size:42px;
+    color:#166534;
     margin-bottom:15px;
 }
 
 .lokasi-title p{
     color:#666;
+    font-size:18px;
 }
 
-.lokasi-preview{
-    display:flex;
-    align-items:center;
-    gap:40px;
-    background:white;
-    padding:25px;
+.lokasi-map{
+    overflow:hidden;
     border-radius:20px;
-    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    box-shadow:0 10px 30px rgba(0,0,0,.1);
+    margin-bottom:45px;
 }
 
-.lokasi-preview img{
-    width:45%;
-    border-radius:15px;
+.lokasi-map iframe{
+    width:100%;
+    height:380px;
+    border:none;
 }
 
-.lokasi-text{
-    width:55%;
+.lokasi-container{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
 }
 
-.lokasi-text h3{
-    color:#2E7D32;
+.lokasi-card{
+    display:flex;
+    gap:20px;
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.lokasi-card:hover{
+    transform:translateY(-8px);
+}
+
+.lokasi-card img{
+    width:220px;
+    height:180px;
+    object-fit:cover;
+}
+
+.lokasi-info{
+    padding:25px;
+}
+
+.lokasi-info h3{
+    color:#166534;
     margin-bottom:15px;
 }
 
-.lokasi-text p{
-    color:#555;
-    line-height:1.7;
-    margin-bottom:25px;
+.lokasi-info p{
+    color:#666;
+    margin:8px 0;
 }
 
-.btn-lokasi{
+.lokasi-info a{
     display:inline-block;
-    background:#2E7D32;
-    color:white;
+    margin-top:15px;
+    color:#22C55E;
+    font-weight:bold;
     text-decoration:none;
-    padding:12px 28px;
-    border-radius:10px;
 }
 
-.btn-lokasi:hover{
-    background:#1B5E20;
+.btn-kembali{
+    display:inline-block;
+    margin-top:50px;
+    background:#22C55E;
+    color:white;
+    padding:14px 30px;
+    border-radius:12px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn-kembali:hover{
+    background:#16A34A;
+}
+
+.kembali{
+    text-align:center;
+}
+
+/* =========================
+   SCROLL ANIMATION
+========================= */
+
+.hidden{
+    opacity:0;
+    transform:translateY(70px);
+    transition:all .8s ease;
+}
+
+.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media(max-width:900px){
+
+.lokasi-container{
+    grid-template-columns:1fr;
+}
+
+.lokasi-card{
+    flex-direction:column;
+}
+
+.lokasi-card img{
+    width:100%;
+    height:220px;
+}
+
+}
+
+@media (max-width:992px){
+
+    /* Hero */
+    .hero-container{
+        grid-template-columns:1fr;
+        text-align:center;
+        gap:50px;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+    }
+
+    .hero-image img{
+        max-width:420px;
+    }
+
+    /* Statistik */
+    .statistik-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    /* Reward */
+    .reward-container{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    /* Reward */
+
+    .reward-container{
+
+    grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    /* Hero */
+    .hero-title{
+        font-size:2.8rem;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .hero-btn{
+        width:100%;
+        max-width:280px;
+    }
+
+    .hero-image img{
+        width:100%;
+    }
+
+    /* Statistik */
+    .statistik-grid{
+        grid-template-columns:1fr;
+    }
+
+    /* Reward */
+    .reward-container{
+        grid-template-columns:1fr;
+    }
+
+    /* Footer */
+    .footer-container{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    /* Reward */
+
+    .reward-container{
+
+    grid-template-columns:1fr;
+
+    }
+
+}
+
+/* =========================
+   HERO EDUKASI
+========================= */
+
+#hero-edukasi{
+
+    padding:80px 0 50px;
+
+    background:linear-gradient(180deg,#E8FFF0,#F8FAF8);
+
+    text-align:center;
+}
+
+#hero-edukasi h1{
+
+    font-size:48px;
+
+    color:#14532D;
+
+    margin-bottom:20px;
+}
+
+#hero-edukasi p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    color:#666;
+
+    line-height:1.8;
+
+    font-size:18px;
+}
+
+/* =========================
+   ARTIKEL EDUKASI
+========================= */
+
+#artikel-edukasi{
+
+    padding:80px 0;
+
+    background:#F8FAF8;
+}
+
+.artikel-card{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:30px;
+
+    background:white;
+
+    border-radius:25px;
+
+    padding:25px;
+
+    margin-bottom:35px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.35s;
+}
+
+.artikel-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+}
+
+.artikel-card img{
+
+    width:260px;
+
+    height:170px;
+
+    object-fit:cover;
+
+    border-radius:18px;
+
+    flex-shrink:0;
+}
+
+.artikel-content{
+
+    flex:1;
+}
+
+.artikel-content h3{
+
+    color:#14532D;
+
+    font-size:28px;
+
+    margin-bottom:15px;
+}
+
+.artikel-content p{
+
+    color:#666;
+
+    line-height:1.8;
+
+    margin-bottom:20px;
+}
+
+.artikel-content a{
+
+    display:inline-block;
+
+    color:#22C55E;
+
+    font-weight:bold;
+
+    text-decoration:none;
+
+    transition:.3s;
+}
+
+.artikel-content a:hover{
+
+    color:#15803D;
+
+    transform:translateX(8px);
+}
+
+/* =========================
+   RESPONSIVE EDUKASI
+========================= */
+
+@media(max-width:992px){
+
+    .artikel-card{
+
+        flex-direction:column;
+
+        text-align:center;
+    }
+
+    .artikel-card img{
+
+        width:100%;
+
+        height:260px;
+    }
+
+}
+
+@media(max-width:768px){
+
+    #hero-edukasi h1{
+
+        font-size:36px;
+    }
+
+    #hero-edukasi p{
+
+        font-size:16px;
+    }
+
+    .artikel-card{
+
+        padding:20px;
+    }
+
+    .artikel-card img{
+
+        height:220px;
+    }
+
+    .artikel-content h3{
+
+        font-size:24px;
+    }
+
+}
+
+/* =========================
+   HERO ABOUT
+========================= */
+
+#hero-about{
+
+    padding:90px 0;
+
+    background:linear-gradient(180deg,#E8FFF0,#F8FAF8);
+
+    text-align:center;
+}
+
+#hero-about h1{
+
+    font-size:48px;
+
+    color:#14532D;
+
+    margin-bottom:20px;
+}
+
+#hero-about p{
+
+    max-width:720px;
+
+    margin:auto;
+
+    color:#666;
+
+    font-size:18px;
+
+    line-height:1.8;
+}
+
+/* =========================
+   VISI MISI
+========================= */
+
+#visi-misi{
+
+    padding:90px 0;
+
+    background:#ffffff;
+}
+
+.visi-misi-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:35px;
+}
+
+.visi-card,
+.misi-card{
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:25px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.35s;
+}
+
+.visi-card:hover,
+.misi-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+}
+
+.visi-card h2,
+.misi-card h2{
+
+    color:#14532D;
+
+    margin-bottom:20px;
+}
+
+.visi-card p{
+
+    color:#666;
+
+    line-height:1.8;
+}
+
+.misi-card ul{
+
+    padding-left:20px;
+
+    color:#666;
+
+    line-height:2;
+}
+
+/* =========================
+   KEUNGGULAN
+========================= */
+
+#keunggulan{
+
+    padding:90px 0;
+
+    background:#F8FAF8;
+}
+
+.keunggulan-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+    margin-top:60px;
+}
+
+.keunggulan-card{
+
+    background:white;
+
+    border-radius:25px;
+
+    padding:35px;
+
+    text-align:center;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.35s;
+}
+
+.keunggulan-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.15);
+}
+
+.keunggulan-card h3{
+
+    font-size:52px;
+
+    margin-bottom:20px;
+}
+
+.keunggulan-card h4{
+
+    color:#14532D;
+
+    margin-bottom:15px;
+}
+
+.keunggulan-card p{
+
+    color:#666;
+
+    line-height:1.7;
+}
+
+/* =========================
+   ALUR
+========================= */
+
+#alur-about{
+
+    padding:90px 0;
+
+    background:#ffffff;
+}
+
+.alur-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+    margin-top:60px;
+}
+
+.alur-card{
+
+    background:#22C55E;
+
+    color:white;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    transition:.35s;
+}
+
+.alur-card:hover{
+
+    transform:translateY(-8px);
+}
+
+.alur-card h3{
+
+    font-size:50px;
+
+    margin-bottom:20px;
+}
+
+.alur-card p{
+
+    font-size:18px;
+
+    font-weight:bold;
+}
+
+/* =========================
+   CTA
+========================= */
+
+#about-cta{
+
+    padding:100px 0;
+
+    background:linear-gradient(135deg,#166534,#22C55E);
+
+    text-align:center;
+
+    color:white;
+}
+
+#about-cta h2{
+
+    font-size:42px;
+
+    margin-bottom:20px;
+}
+
+#about-cta p{
+
+    max-width:700px;
+
+    margin:0 auto 40px;
+
+    line-height:1.8;
+
+    font-size:18px;
+}
+
+#about-cta .btn-primary{
+
+    display:inline-block;
+
+    background:white;
+
+    color:#166534;
+
+    font-weight:bold;
+
+    text-decoration:none;
+
+    padding:16px 35px;
+
+    border-radius:40px;
+
+    transition:.3s;
+}
+
+#about-cta .btn-primary:hover{
+
+    background:#F3F4F6;
+
+    transform:translateY(-4px);
+}
+
+/* =========================
+   RESPONSIVE ABOUT
+========================= */
+
+@media(max-width:992px){
+
+    .visi-misi-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .keunggulan-container{
+
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .alur-container{
+
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:768px){
+
+    #hero-about h1{
+
+        font-size:36px;
+    }
+
+    #hero-about p{
+
+        font-size:16px;
+    }
+
+    .keunggulan-container{
+
+        grid-template-columns:1fr;
+    }
+
+    .alur-container{
+
+        grid-template-columns:1fr;
+    }
+
 }
 
 /* =========================
@@ -555,8 +1572,105 @@ nav .container{
 ========================= */
 
 footer{
-    background: #166534;
-    color: white;
-    padding: 40px 0;
-    margin-top: 50px;
+
+    background:#14532D;
+    color:white;
+    margin-top:80px;
+}
+
+.footer-container{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:60px;
+
+    padding:70px 20px;
+
+    flex-wrap:wrap;
+}
+
+.footer-about{
+
+    flex:2;
+}
+
+.footer-about h2{
+
+    font-size:32px;
+
+    margin-bottom:20px;
+}
+
+.footer-about p{
+
+    color:#d1d5db;
+
+    line-height:1.8;
+}
+
+.footer-menu{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+}
+
+.footer-menu h3{
+
+    margin-bottom:20px;
+}
+
+.footer-menu a{
+
+    color:#d1d5db;
+
+    text-decoration:none;
+
+    margin-bottom:12px;
+
+    transition:.3s;
+}
+
+.footer-menu a:hover{
+
+    color:#22C55E;
+
+    padding-left:8px;
+}
+
+.footer-contact{
+
+    flex:1;
+}
+
+.footer-contact h3{
+
+    margin-bottom:20px;
+}
+
+.footer-contact p{
+
+    margin-bottom:15px;
+
+    color:#d1d5db;
+}
+
+footer hr{
+
+    border:none;
+
+    border-top:1px solid rgba(255,255,255,.15);
+}
+
+.footer-bottom{
+
+    text-align:center;
+
+    padding:20px;
+
+    color:#d1d5db;
 }
