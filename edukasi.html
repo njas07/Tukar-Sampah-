@@ -1,154 +1,303 @@
 <!DOCTYPE html>
-
 <html lang="id">
+
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Edukasi - Tukar Sampah</title>
-<link href="Tukar Sampah.css" rel="stylesheet"/>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Edukasi - Tukar Sampah</title>
+
+    <link rel="stylesheet" href="Tukar Sampah.css">
+
 </head>
-<body><header class="header">
-<nav id="navbar">
-<div class="container navbar-container">
-<!-- Logo -->
-<a class="logo" href="Tukar Sampah.html">
-<div class="logo-icon">
-<img alt="Logo Maskot" src="img/maskot tukar sampah.png"/>
-</div>
-<div class="logo-text">
-<h2>Tukar Sampah</h2>
-<span>Recycle • Reward • Reuse</span>
-</div>
-</a>
-<!-- Menu -->
-<ul class="nav-links" id="navLinks">
-<li>
-<a href="Tukar Sampah.html">
-                        Beranda
-                    </a>
-</li>
-<li>
-<a href="about.html">
-                        Tentang Kami
-                    </a>
-</li>
-<li>
-<a class="active" href="edukasi.html">
-                        Edukasi
-                    </a>
-</li>
-<li>
-<a href="reward.html">
-                        Reward
-                    </a>
-</li>
-<li>
-<a href="lokasi.html">
-                        Lokasi
-                    </a>
-</li>
-</ul>
-<!-- Kanan -->
-<div class="navbar-right">
-<div class="search-box">
-<input placeholder="Cari..." type="text"/>
-<button type="button">
 
-                        🔍
+<body>
 
-                    </button>
-</div>
-<a class="btn-login" href="#">
+    <!-- =========================
+            HEADER
+    ========================== -->
 
-                    Masuk
+    <header class="header">
+
+        <nav id="navbar">
+
+            <div class="container navbar-container">
+
+                <!-- Logo -->
+                <a href="Tukar Sampah.html" class="logo">
+
+                    <div class="logo-icon">
+                        <img
+                            src="img/maskot tukar sampah.png"
+                            alt="Logo Maskot">
+                    </div>
+
+                    <div class="logo-text">
+                        <h2>Tukar Sampah</h2>
+                        <span>Recycle • Reward • Reuse</span>
+                    </div>
 
                 </a>
-<button aria-label="Menu" class="menu-toggle" id="menuToggle" type="button">
 
-                    ☰
+                <!-- Menu Navigasi -->
+                <ul class="nav-links" id="navLinks">
 
-                </button>
-</div>
-</div>
-</nav>
-</header>
+                    <li>
+                        <a href="Tukar Sampah.html">
+                            Beranda
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">
+                            Tentang Kami
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="edukasi.html" class="active">
+                            Edukasi
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="reward.html">
+                            Reward
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="lokasi.html">
+                            Lokasi
+                        </a>
+                    </li>
+
+                </ul>
+
+                <!-- Navbar Kanan -->
+                <div class="navbar-right">
+
+                    <!-- Search -->
+                    <div class="search-box">
+
+                        <input
+                            type="text"
+                            placeholder="Cari...">
+
+                        <button type="button">
+                            🔍
+                        </button>
+
+                    </div>
+
+                    <!-- Login -->
+                    <a href="#" class="btn-login">
+                        Masuk
+                    </a>
+
+                    <!-- Menu Mobile -->
+                    <button
+                        id="menuToggle"
+                        class="menu-toggle"
+                        type="button"
+                        aria-label="Menu">
+
+                        ☰
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
 <!-- =========================
             NAVBAR
-    ========================== -->
+========================= -->
+
 <nav>
-<div class="container">
-<div class="logo">
-                Tukar Sampah
-            </div>
-<ul class="nav-links">
-<li><a href="Tukar Sampah.html">Beranda</a></li>
-<li><a href="about.html">Tentang Kami</a></li>
-<li><a href="edukasi.html">Edukasi</a></li>
-<li><a href="reward.html">Reward</a></li>
-<li><a href="lokasi.html">Lokasi</a></li>
-</ul>
-<div class="nav-button">
-<a href="#">Masuk</a>
-</div>
-</div>
+
+    <div class="container">
+
+        <!-- Logo -->
+        <div class="logo">
+            Tukar Sampah
+        </div>
+
+        <!-- Menu -->
+        <ul class="nav-links">
+
+            <li>
+                <a href="Tukar Sampah.html">
+                    Beranda
+                </a>
+            </li>
+
+            <li>
+                <a href="about.html">
+                    Tentang Kami
+                </a>
+            </li>
+
+            <li>
+                <a href="edukasi.html">
+                    Edukasi
+                </a>
+            </li>
+
+            <li>
+                <a href="reward.html">
+                    Reward
+                </a>
+            </li>
+
+            <li>
+                <a href="lokasi.html">
+                    Lokasi
+                </a>
+            </li>
+
+        </ul>
+
+        <!-- Tombol -->
+        <div class="nav-button">
+
+            <a href="#">
+                Masuk
+            </a>
+
+        </div>
+
+    </div>
+
 </nav>
 <!-- =========================
             HERO EDUKASI
-    ========================== -->
+========================= -->
+
 <section id="hero-edukasi">
-<div class="container">
-<h1>Edukasi Pengelolaan Sampah</h1>
-<p>
-                Pelajari cara mengelola sampah dengan benar,
-                menjaga lingkungan tetap bersih,
-                serta mengetahui manfaat daur ulang
-                untuk kehidupan yang lebih baik.
-            </p>
-</div>
+
+    <div class="container">
+
+        <h1>
+            Edukasi Pengelolaan Sampah
+        </h1>
+
+        <p>
+            Pelajari cara mengelola sampah dengan benar,
+            menjaga lingkungan tetap bersih,
+            serta mengetahui manfaat daur ulang
+            untuk kehidupan yang lebih baik.
+        </p>
+
+    </div>
+
 </section>
-<!-- =========================
+
+    <!-- =========================
             ARTIKEL EDUKASI
     ========================== -->
 <section id="artikel-edukasi">
-<div class="container">
-<!-- Artikel 1 -->
+    <div class="container">
+
+        <!-- Artikel 1 -->
+  <div class="artikel-card">
+
+    <div class="artikel-image">
+        <img
+            src="img/memilah sampah.jpeg"
+            alt="Memilah Sampah">
+    </div>
+
+    <div class="artikel-content">
+
+        <h3>Cara Memilah Sampah</h3>
+
+        <p>
+            Pelajari cara membedakan sampah organik,
+            anorganik, dan B3 agar proses daur ulang
+            menjadi lebih mudah.
+        </p>
+
+        <a href="https://zerowaste.id/zero-waste-lifestyle/cara-memilah-sampah-di-rumah/"
+           target="_blank"
+           rel="noopener noreferrer">
+            Baca Selengkapnya →
+        </a>
+
+    </div>
+
+</div>
+        <!-- Artikel 2 -->
+       <div class="artikel-card">
+
+    <div class="artikel-image">
+        <img
+            src="img/sampah lingkungan edukasi.jpg"
+            alt="Bahaya Plastik">
+    </div>
+
+    <div class="artikel-content">
+
+        <h3>Bahaya Sampah Plastik</h3>
+
+        <p>
+            Ketahui dampak sampah plastik terhadap
+            lingkungan, laut, dan kesehatan manusia.
+        </p>
+
+        <a href="https://plasticsmartcities.wwf.id/feature/article/sampah-plastik-ancaman-bagi-lingkungan-dan-kehidupan"
+           target="_blank"
+           rel="noopener noreferrer">
+            Baca Selengkapnya →
+        </a>
+
+    </div>
+
+</div>
+
+        <!-- Artikel 3 -->
 <div class="artikel-card">
-<img alt="Memilah Sampah" src="img/memilah-sampah.jpg"/>
-<div class="artikel-content">
-<h3>Cara Memilah Sampah</h3>
-<p>
-                        Pelajari cara membedakan sampah organik,
-                        anorganik, dan B3 agar proses daur ulang
-                        menjadi lebih mudah.
-                    </p>
-<a href="#">Baca Selengkapnya →</a>
+
+    <div class="artikel-image">
+        <img
+            src="img/daur ulang kreatif.jpg"
+            alt="Daur Ulang">
+    </div>
+
+    <div class="artikel-content">
+
+        <h3>Daur Ulang Kreatif</h3>
+
+        <p>
+            Ubah sampah menjadi barang bernilai ekonomi
+            dan bermanfaat bagi kehidupan sehari-hari.
+        </p>
+
+        <a href="https://bpd.telkomuniversity.ac.id/17-ide-kerajinan-barang-bekas-ubah-sampah-jadi-karya/"
+           target="_blank"
+           rel="noopener noreferrer">
+            Baca Selengkapnya →
+        </a>
+
+    </div>
+
 </div>
+
+<div class="artikel-sumber">
+    <small>
+        Sumber artikel:
+        <strong>Zero Waste Indonesia</strong>,
+        <strong>WWF Indonesia</strong>, dan
+        <strong>Telkom University</strong>.
+    </small>
 </div>
-<!-- Artikel 2 -->
-<div class="artikel-card">
-<img alt="Bahaya Plastik" src="img/bahaya-plastik.jpg"/>
-<div class="artikel-content">
-<h3>Bahaya Sampah Plastik</h3>
-<p>
-                        Ketahui dampak sampah plastik terhadap
-                        lingkungan, laut, dan kesehatan manusia.
-                    </p>
-<a href="#">Baca Selengkapnya →</a>
-</div>
-</div>
-<!-- Artikel 3 -->
-<div class="artikel-card">
-<img alt="Daur Ulang" src="img/daur-ulang.jpg"/>
-<div class="artikel-content">
-<h3>Daur Ulang Kreatif</h3>
-<p>
-                        Ubah sampah menjadi barang bernilai ekonomi
-                        dan bermanfaat bagi kehidupan sehari-hari.
-                    </p>
-<a href="#">Baca Selengkapnya →</a>
-</div>
-</div>
+    </div>
 </section>
+
 <!-- =========================
             TOMBOL
     ========================== -->
@@ -159,19 +308,21 @@
 
         </a>
 </div>
+
 <!-- =========================
             FOOTER
     ========================== -->
 <footer>
-<div class="container footer-container">
-<div class="footer-about">
-<h2>Tukar Sampah</h2>
-<p>
+    <div class="container footer-container">
+        
+    <div class="footer-about">
+            <h2>Tukar Sampah</h2>
+                <p>
                     Platform digital yang membantu masyarakat
                     mengelola sampah menjadi sesuatu yang bernilai
                     demi lingkungan yang lebih bersih.
                 </p>
-</div>
+    </div>
 <div class="footer-menu">
 <h3>Menu</h3>
 <a href="Tukar Sampah.html">Beranda</a>
@@ -182,9 +333,9 @@
 </div>
 <div class="footer-contact">
 <h3>Kontak</h3>
-<p>📧 tukarsampah@gmail.com</p>
-<p>📞 +62 812-3456-7890</p>
-<p>📍 Denpasar, Bali</p>
+<p> tukarsampah@gmail.com</p>
+<p> +62 812-3456-7890</p>
+<p> Denpasar, Bali</p>
 </div>
 </div>
 <hr/>

@@ -1,230 +1,359 @@
 <!DOCTYPE html>
-
 <html lang="id">
+
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Lokasi Bank Sampah | Tukar Sampah</title>
-<link href="Tukar Sampah.css" rel="stylesheet"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lokasi Bank Sampah | Tukar Sampah</title>
+
+    <link rel="stylesheet" href="Tukar Sampah.css">
 </head>
-<body><header class="header">
-<nav id="navbar">
-<div class="container navbar-container">
-<!-- Logo -->
-<a class="logo" href="Tukar Sampah.html">
-<div class="logo-icon">
-<img alt="Logo Maskot" src="img/maskot tukar sampah.png"/>
-</div>
-<div class="logo-text">
-<h2>Tukar Sampah</h2>
-<span>Recycle • Reward • Reuse</span>
-</div>
-</a>
-<!-- Menu -->
-<ul class="nav-links" id="navLinks">
-<li>
-<a href="Tukar Sampah.html">
-                        Beranda
-                    </a>
-</li>
-<li>
-<a href="about.html">
-                        Tentang Kami
-                    </a>
-</li>
-<li>
-<a href="edukasi.html">
-                        Edukasi
-                    </a>
-</li>
-<li>
-<a href="reward.html">
-                        Reward
-                    </a>
-</li>
-<li>
-<a class="active" href="lokasi.html">
-                        Lokasi
-                    </a>
-</li>
-</ul>
-<!-- Kanan -->
-<div class="navbar-right">
-<div class="search-box">
-<input placeholder="Cari..." type="text"/>
-<button type="button">
 
-                        🔍
+<body>
 
-                    </button>
-</div>
-<a class="btn-login" href="#">
+    <!-- =========================
+            HEADER
+    ========================== -->
 
-                    Masuk
+    <header class="header">
+
+        <nav id="navbar">
+
+            <div class="container navbar-container">
+
+                <!-- Logo -->
+                <a href="Tukar Sampah.html" class="logo">
+
+                    <div class="logo-icon">
+                        <img src="img/maskot tukar sampah.png" alt="Logo Maskot">
+                    </div>
+
+                    <div class="logo-text">
+                        <h2>Tukar Sampah</h2>
+                        <span>Recycle • Reward • Reuse</span>
+                    </div>
 
                 </a>
-<button aria-label="Menu" class="menu-toggle" id="menuToggle" type="button">
 
-                    ☰
+                <!-- Menu Navigasi -->
+                <ul class="nav-links" id="navLinks">
 
-                </button>
-</div>
-</div>
-</nav>
-</header>
-<!-- =========================
-        NAVBAR
-========================= -->
-<nav id="navbar">
-<div class="container">
-<div class="logo">
-            Tukar Sampah
-        </div>
-<ul class="nav-links">
-<li><a href="Tukar Sampah.html">Beranda</a></li>
-<li><a href="edukasi.html">Edukasi</a></li>
-<li><a href="reward.html">Reward</a></li>
-<li><a class="active" href="lokasi.html">Lokasi</a></li>
-</ul>
-</div>
-</nav>
+                    <li>
+                        <a href="Tukar Sampah.html">
+                            Beranda
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">
+                            Tentang Kami
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="edukasi.html">
+                            Edukasi
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="reward.html">
+                            Reward
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="lokasi.html" class="active">
+                            Lokasi
+                        </a>
+                    </li>
+
+                </ul>
+
+                <!-- Bagian Kanan Navbar -->
+                <div class="navbar-right">
+
+                    <!-- Search -->
+                    <div class="search-box">
+
+                        <input
+                            type="text"
+                            placeholder="Cari...">
+
+                        <button type="button">
+                            🔍
+                        </button>
+
+                    </div>
+
+                    <!-- Login -->
+                    <a href="#" class="btn-login">
+                        Masuk
+                    </a>
+
+                    <!-- Mobile Menu -->
+                    <button
+                        type="button"
+                        id="menuToggle"
+                        class="menu-toggle"
+                        aria-label="Menu">
+
+                        ☰
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
 <!-- =========================
         HALAMAN LOKASI
 ========================= -->
-<section id="halaman-lokasi">
-<div class="container">
-<div class="lokasi-title">
-<h2>Lokasi Bank Sampah</h2>
-<p>
-                Temukan bank sampah terdekat untuk menukarkan sampahmu
-                dan mendapatkan berbagai reward menarik.
-            </p>
-</div>
-<!-- =========================
-                GOOGLE MAPS
-        ========================== -->
-<div class="lokasi-map">
-<iframe loading="lazy" src="https://www.google.com/maps?q=Denpasar,Bali&amp;output=embed">
-</iframe>
-</div>
-<!-- =========================
-                LOKASI PENGGUNA
-        ========================== -->
-<div class="user-location">
-<div class="user-header">
-<div>
-<h3>📍 Lokasi Anda</h3>
-<p id="statusLokasi">
 
-                        Klik tombol di samping untuk mendeteksi lokasi Anda.
+<main>
 
-                    </p>
-</div>
-<button class="btn-lokasi-user" id="btnLokasi" type="button">
+    <section id="halaman-lokasi">
 
-                    Gunakan Lokasi Saya
+        <div class="container">
 
-                </button>
-</div>
-<div class="koordinat" id="koordinat"></div>
-</div>
-<!-- =========================
-                DAFTAR BANK SAMPAH
-        ========================== -->
-<div class="lokasi-container">
-<!-- CARD 1 -->
-<div class="lokasi-card" data-lat="-8.7063" data-lng="115.2245">
-<img alt="Bank Sampah Hijau" src="img/bank-sampah1.jpg"/>
-<div class="lokasi-info">
-<h3>🌿 Bank Sampah Hijau</h3>
-<p>📍 Denpasar Selatan</p>
-<p>🕘 08.00 - 16.00</p>
-<p>📞 0812-3456-7890</p>
-<p class="jarak">
+            <!-- Judul -->
+            <div class="lokasi-title">
 
-                        📏 Menunggu lokasi pengguna...
+                <h2>Lokasi Bank Sampah</h2>
 
-                    </p>
-<button class="btn-navigasi" type="button">
+                <p>
+                    Temukan bank sampah terdekat untuk menukarkan sampahmu
+                    dan mendapatkan berbagai reward menarik.
+                </p>
 
-                        🧭 Navigasi
+            </div>
 
-                    </button>
-</div>
-</div>
-<!-- CARD 2 -->
-<div class="lokasi-card" data-lat="-8.6697" data-lng="115.1965">
-<img alt="Bank Sampah Bersih" src="img/bank-sampah2.jpg"/>
-<div class="lokasi-info">
-<h3>♻️ Bank Sampah Bersih</h3>
-<p>📍 Denpasar Barat</p>
-<p>🕘 08.00 - 17.00</p>
-<p>📞 0813-4567-8901</p>
-<p class="jarak">
+            <!-- =========================
+                    GOOGLE MAPS
+            ========================== -->
 
-                        📏 Menunggu lokasi pengguna...
+            <div class="lokasi-map">
 
-                    </p>
-<button class="btn-navigasi" type="button">
+                <iframe
+                    src="https://www.google.com/maps?q=Denpasar,Bali&amp;output=embed"
+                    loading="lazy">
+                </iframe>
 
-                        🧭 Navigasi
+            </div>
+
+            <!-- =========================
+                    LOKASI PENGGUNA
+            ========================== -->
+
+            <div class="user-location">
+
+                <div class="user-header">
+
+                    <div>
+
+                        <h3>📍 Lokasi Anda</h3>
+
+                        <p id="statusLokasi">
+                            Klik tombol di samping untuk mendeteksi lokasi Anda.
+                        </p>
+
+                    </div>
+
+                    <button
+                        id="btnLokasi"
+                        class="btn-lokasi-user"
+                        type="button">
+
+                        Gunakan Lokasi Saya
 
                     </button>
-</div>
-</div>
-<!-- CARD 3 -->
-<div class="lokasi-card" data-lat="-8.6502" data-lng="115.2389">
-<img alt="Bank Sampah Asri" src="img/bank-sampah3.jpg"/>
-<div class="lokasi-info">
-<h3>🍃 Bank Sampah Asri</h3>
-<p>📍 Denpasar Timur</p>
-<p>🕘 08.00 - 16.30</p>
-<p>📞 0815-6789-0123</p>
-<p class="jarak">
 
-                        📏 Menunggu lokasi pengguna...
+                </div>
 
-                    </p>
-<button class="btn-navigasi" type="button">
+                <div
+                    id="koordinat"
+                    class="koordinat">
+                </div>
 
-                        🧭 Navigasi
+            </div>
 
-                    </button>
-</div>
-</div>
-<!-- CARD 4 -->
-<div class="lokasi-card" data-lat="-8.6210" data-lng="115.2123">
-<img alt="Bank Sampah Lestari" src="img/bank-sampah4.jpg"/>
-<div class="lokasi-info">
-<h3>🌱 Bank Sampah Lestari</h3>
-<p>📍 Denpasar Utara</p>
-<p>🕘 08.30 - 17.00</p>
-<p>📞 0817-9876-5432</p>
-<p class="jarak">
+            <!-- =========================
+                    DAFTAR BANK SAMPAH
+            ========================== -->
 
-                        📏 Menunggu lokasi pengguna...
+            <div class="lokasi-container">
 
-                    </p>
-<button class="btn-navigasi" type="button">
+                <!-- Card 1 -->
+                <article
+                    class="lokasi-card"
+                    data-lat="-8.7063"
+                    data-lng="115.2245">
 
-                        🧭 Navigasi
+                    <img
+                        src="img/bank sampah 1.jpeg"
+                        alt="Bank Sampah Hijau">
 
-                    </button>
-</div>
-</div>
-</div>
-<!-- =========================
-                KEMBALI
-        ========================== -->
-<div class="kembali">
-<a class="btn-kembali" href="Tukar Sampah.html">
+                    <div class="lokasi-info">
 
-                ← Kembali ke Beranda
+                        <h3>🌿 Bank Sampah Hijau</h3>
 
-            </a>
-</div>
-</div>
-</section>
+                        <p>📍 Denpasar Selatan</p>
+                        <p>🕘 08.00 - 16.00</p>
+                        <p>📞 0812-3456-7890</p>
+
+                        <p class="jarak">
+                            Menunggu lokasi pengguna...
+                        </p>
+
+                        <button
+                            class="btn-navigasi"
+                            type="button">
+
+                            Navigasi
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+                <!-- Card 2 -->
+                <article
+                    class="lokasi-card"
+                    data-lat="-8.6697"
+                    data-lng="115.1965">
+
+                    <img
+                        src="img/bank sampah 2.jpeg"
+                        alt="Bank Sampah Bersih">
+
+                    <div class="lokasi-info">
+
+                        <h3>♻️ Bank Sampah Bersih</h3>
+
+                        <p>📍 Denpasar Barat</p>
+                        <p>🕘 08.00 - 17.00</p>
+                        <p>📞 0813-4567-8901</p>
+
+                        <p class="jarak">
+                            Menunggu lokasi pengguna...
+                        </p>
+
+                        <button
+                            class="btn-navigasi"
+                            type="button">
+
+                            Navigasi
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+                <!-- Card 3 -->
+                <article
+                    class="lokasi-card"
+                    data-lat="-8.6502"
+                    data-lng="115.2389">
+
+                    <img
+                        src="img/bank sampah 3.jpeg"
+                        alt="Bank Sampah Asri">
+
+                    <div class="lokasi-info">
+
+                        <h3>🍃 Bank Sampah Asri</h3>
+
+                        <p>📍 Denpasar Timur</p>
+                        <p>🕘 08.00 - 16.30</p>
+                        <p>📞 0815-6789-0123</p>
+
+                        <p class="jarak">
+                            Menunggu lokasi pengguna...
+                        </p>
+
+                        <button
+                            class="btn-navigasi"
+                            type="button">
+
+                            Navigasi
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+                <!-- Card 4 -->
+                <article
+                    class="lokasi-card"
+                    data-lat="-8.6210"
+                    data-lng="115.2123">
+
+                    <img
+                        src="img/bank sampah 4.jpeg"
+                        alt="Bank Sampah Lestari">
+
+                    <div class="lokasi-info">
+
+                        <h3>🌱 Bank Sampah Lestari</h3>
+
+                        <p>📍 Denpasar Utara</p>
+                        <p>🕘 08.30 - 17.00</p>
+                        <p>📞 0817-9876-5432</p>
+
+                        <p class="jarak">
+                            Menunggu lokasi pengguna...
+                        </p>
+
+                        <button
+                            class="btn-navigasi"
+                            type="button">
+
+                            Navigasi
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+            <!-- =========================
+                    KEMBALI
+            ========================== -->
+
+            <div class="kembali">
+
+                <a
+                    href="Tukar Sampah.html"
+                    class="btn-kembali">
+
+                    ← Kembali ke Beranda
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
 <script src="Tukar Sampah.js"></script>
+
 </body>
+
 </html>
