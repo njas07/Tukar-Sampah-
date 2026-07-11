@@ -4887,6 +4887,46 @@ html{
 
     }
 
+@media(max-width:992px){
+
+    /* Navbar */
+
+    .navbar-container{
+        padding:0 10px;
+    }
+
+    .nav-links{
+        display:none;
+    }
+
+    .nav-links.active{
+        display:flex;
+        flex-direction:column;
+        position:absolute;
+        top:90px;
+        right:20px;
+        width:260px;
+        background:#fff;
+        padding:20px;
+        border-radius:20px;
+        gap:15px;
+        box-shadow:0 10px 30px rgba(0,0,0,.15);
+        z-index:999;
+    }
+
+    .search-box{
+        display:none;
+    }
+
+    .menu-toggle{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+
+    /* Hero */
+
+}
     .search-box{
 
         display:none;
